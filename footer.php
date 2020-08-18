@@ -5,61 +5,53 @@
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At voluptate vel, fuga id eos illo ipsa aliquid esse sit quae quod quis! Sint quod commodi delectus odio, quaerat quisquam provident.</p>
         </div>
         <div class="footer-info-social">
-            <a href="#">FB</a>
-            <a href="#">twitter</a>
-            <a href="#">Insta</a>
-            <a href="#">Linkedin</a>
+            <a href="#" class="footer-fb"><img src="http://localhost:8888/wordpress/wp-content/themes/BananaPizza/assets/svg/facebook.svg" alt=""></a>
+            <a href="#" class="footer-twitter"><img src="<?php bloginfo('template_url'); ?>/assets/svg/twitter.svg" alt=""></a>
+            <a href="#" class="footer-insta"><img src="<?php bloginfo('template_url'); ?>/assets/svg/instagram.svg" alt=""></a>
+            <a href="#" class="footer-linkedin"><img src="<?php bloginfo('template_url'); ?>/assets/svg/linkedin.svg" alt=""></a>
         </div>
     </div>
     <div class="footer-contact-hour">
-        <h3>Open Hours</h3>
         <div class="footer-open">
+        <h3>Open Hours</h3>
             <div class="footer-days-open">
                 <div class="footer-hour">
-                    <p>ici icone</p>
+                    <img src="<?php bloginfo('template_url'); ?>/assets/svg/time-clock.svg" alt="">
                 </div>
                 <div class="footer-days-hour">
-                    <div class="footer-day">
                         <p>Mondays</p>
-                        <p>la ligne</p>
-                        <p>recup hour php</p>
-                    </div>
+                        <p>----</p>
+                        <p>php here</p>
                 </div>
             </div>
             <div class="footer-days-open">
                 <div class="footer-hour">
-                    <p>ici icone</p>
+                    <img src="<?php bloginfo('template_url'); ?>/assets/svg/time-clock.svg" alt="">
                 </div>
                 <div class="footer-days-hour">
-                    <div class="footer-day">
-                        <p>Mondays</p>
-                        <p>la ligne</p>
-                        <p>recup hour php</p>
-                    </div>
+                        <p>Tue-Fri</p>
+                        <p>----</p>
+                        <p>php here</p>
                 </div>
             </div>
             <div class="footer-days-open">
                 <div class="footer-hour">
-                    <p>ici icone</p>
+                    <img src="<?php bloginfo('template_url'); ?>/assets/svg/time-clock.svg" alt="">
                 </div>
                 <div class="footer-days-hour">
-                    <div class="footer-day">
-                        <p>Mondays</p>
-                        <p>la ligne</p>
-                        <p>recup hour php</p>
-                    </div>
+                        <p>Sat-Sun</p>
+                        <p>----</p>
+                        <p>php here</p>
                 </div>
             </div>
             <div class="footer-days-open">
                 <div class="footer-hour">
-                    <p>ici icone</p>
+                    <img src="<?php bloginfo('template_url'); ?>/assets/svg/time-clock.svg" alt="">
                 </div>
                 <div class="footer-days-hour">
-                    <div class="footer-day">
-                        <p>Mondays</p>
-                        <p>la ligne</p>
-                        <p>recup hour php</p>
-                    </div>
+                        <p>Public Holidays</p>
+                        <p>----</p>
+                        <p>php here</p>
                 </div>
             </div>
         </div>

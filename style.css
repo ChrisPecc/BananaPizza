@@ -1,9 +1,11 @@
 body {
   margin: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 footer {
   background-color: #292929;
+  color: #fff;
   min-height: 200px;
   padding: 30px;
   display: -webkit-box;
@@ -29,6 +31,10 @@ footer .footer-info {
   width: 100%;
 }
 
+footer .footer-info-text {
+  margin-top: 20px;
+}
+
 footer .footer-info-social {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -37,5 +43,88 @@ footer .footer-info-social {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  margin-top: 50px;
+}
+
+footer .footer-info-social a {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer-info-social a img {
+  height: 20px;
+}
+
+footer .footer-info-social .footer-fb {
+  background-color: #3b5998;
+}
+
+footer .footer-info-social .footer-twitter {
+  background-color: #1da1f2;
+}
+
+footer .footer-info-social .footer-insta {
+  background-color: #c13584;
+}
+
+footer .footer-info-social .footer-linkedin {
+  background-color: #2867b2;
+}
+
+footer .footer-contact-hour {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer-contact-hour .footer-days-open {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer-contact-hour .footer-days-open .footer-hour {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 20px;
+}
+
+footer .footer-contact-hour .footer-days-open .footer-days-hour {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 250px;
 }
 /*# sourceMappingURL=style.css.map */
