@@ -1,4 +1,6 @@
+
 <footer>
+    <img class="footer-hachures" src="<?php bloginfo('template_url'); ?>/assets/images/hachures-grises.png" alt="">
     <div class="footer-info">
         <div class="footer-info-text">
             <h2>BananaPizza (mettre php)</h2>
