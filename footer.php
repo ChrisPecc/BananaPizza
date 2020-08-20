@@ -1,19 +1,21 @@
-
+<?php
+/*template Name: footer */
+?>
 <footer>
-    <img class="footer-hachures" src="<?php bloginfo('template_url'); ?>/assets/images/hachures-grises.png" alt="">
+    <img class="footer-hachures" src="<?php bloginfo('template_url'); ?>/assets/images/hachures-noires.png" alt="">
     <div class="footer-container">
     
         <div class="footer-info">
-            <h2>mettre php</h2>
+            <h2><?php echo bloginfo('name') ;?></h2>
             <div class="footer-info-text">
                 
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. At voluptate vel, fuga id eos illo ipsa aliquid esse sit quae quod quis!</p>
+                <p><?php echo get_field('description','option') ;?></p>
             </div>
             <div class="footer-info-social">
-                <a href="#" class="footer-fb"><img src="<?php bloginfo('template_url'); ?>/assets/svg/facebook.svg" alt=""></a>
-                <a href="#" class="footer-twitter"><img src="<?php bloginfo('template_url'); ?>/assets/svg/twitter.svg" alt=""></a>
-                <a href="#" class="footer-insta"><img src="<?php bloginfo('template_url'); ?>/assets/svg/instagram.svg" alt=""></a>
-                <a href="#" class="footer-linkedin"><img src="<?php bloginfo('template_url'); ?>/assets/svg/linkedin.svg" alt=""></a>
+                <a href="<?php echo get_field('facebook','option') ;?>" class="footer-fb"><img src="<?php bloginfo('template_url'); ?>/assets/svg/facebook.svg" alt=""></a>
+                <a href="<?php echo get_field('twitter','option') ;?>" class="footer-twitter"><img src="<?php bloginfo('template_url'); ?>/assets/svg/twitter.svg" alt=""></a>
+                <a href="<?php echo get_field('insta','option') ;?>" class="footer-insta"><img src="<?php bloginfo('template_url'); ?>/assets/svg/instagram.svg" alt=""></a>
+                <a href="<?php echo get_field('linkedin','option') ;?>" class="footer-linkedin"><img src="<?php bloginfo('template_url'); ?>/assets/svg/linkedin.svg" alt=""></a>
             </div>
         </div>
         <div class="footer-contact-hour">
@@ -25,8 +27,8 @@
                     </div>
                     <div class="footer-days-hour">
                             <p>Mondays</p>
-                            <p>----</p>
-                            <p>php here</p>
+                            <p><hr></p>
+                            <p><?php echo get_field('monday_hour','option');?></p>
                     </div>
                 </div>
                 <div class="footer-days-open">
@@ -35,8 +37,8 @@
                     </div>
                     <div class="footer-days-hour">
                             <p>Tue-Fri</p>
-                            <p>----</p>
-                            <p>php here</p>
+                            <p><hr></p>
+                            <p><?php echo get_field('tue_fri_hour','option');?></p>
                     </div>
                 </div>
                 <div class="footer-days-open">
@@ -45,8 +47,8 @@
                     </div>
                     <div class="footer-days-hour">
                             <p>Sat-Sun</p>
-                            <p>----</p>
-                            <p>php here</p>
+                            <p><hr></p>
+                            <p><?php echo get_field('sat_sun_hour','option');?></p>
                     </div>
                 </div>
                 <div class="footer-days-open">
@@ -55,8 +57,8 @@
                     </div>
                     <div class="footer-days-hour">
                             <p>Public Holidays</p>
-                            <p>----</p>
-                            <p>php here</p>
+                            <p><hr></p>
+                            <p><?php echo get_field('holiday_hour','option');?></p>
                     </div>
                 </div>
             </div>
@@ -67,7 +69,7 @@
                         <img src="<?php bloginfo('template_url'); ?>/assets/svg/call.svg" alt="">
                     </div>
                     <div class="footer-info-contact">
-                        <p>ici num telephone php</p>
+                        <p><?php echo get_field('phone','option');?></p>
                     </div>
                 </div>
                 <div class="footer-contact-line">
@@ -75,9 +77,9 @@
                     <img src="<?php bloginfo('template_url'); ?>/assets/svg/place.svg" alt="">
                     </div>
                     <div class="footer-info-contact">
-                        <p>ici num adresse php</p>
-                        <p>ici num code postal php</p>
-                        <p>ici pays php</p>
+                        <p><?php echo get_field('street_adress','option');?></p>
+                        <p><?php echo get_field('postalcode_adress','option');?></p>
+                        <p><?php echo get_field('country_adress','option');?></p>
                     </div>
                 </div>
                 <div class="footer-contact-line">
@@ -85,7 +87,7 @@
                     <img src="<?php bloginfo('template_url'); ?>/assets/svg/mail-1.svg" alt="">
                     </div>
                     <div class="footer-info-contact">
-                        <p>ici mail php</p>
+                        <p><?php echo get_field('mail','option');?></p>
                     </div>
                 </div>
             </div>
