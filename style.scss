@@ -6,10 +6,10 @@ body {
 }
 /* START NAV BAR */
 header {
-  padding-left: 6%;
-  padding-right: 6%;
   background-color: black;
   color: white;
+  padding-left: 6%;
+  padding-right: 6%;
 }
 .nav-menu {
   width: 100%;
@@ -58,6 +58,10 @@ header {
       a {
         text-decoration: none;
         color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
       }
     }
     // DIV BLANCHE ORDER
@@ -75,10 +79,11 @@ header {
       a {
         color: white;
         &::before {
-          background-image: url('assets/svg/supermarket.svg');
+          background-image: url('assets/svg/market.svg');
           background-repeat: no-repeat;
           background-position-y: center;
           background-position-x: center;
+          background-size: cover;
           width: 25px;
           height: 25px;
           content: '';
@@ -86,5 +91,95 @@ header {
         }
       }
     }
+  }
+}
+
+$color-grey: #c6538c;
+.hamburgerIcon {
+  display: flex;
+  color: white;
+  text-decoration: none;
+  p {
+    margin-right: 10px;
+  }
+}
+.menuHAM {
+  display: none;
+}
+.open {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  z-index: 150;
+  margin-top: -100px;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding-left: 0;
+    width: 80%;
+    margin: 0 auto;
+    li {
+      display: flex;
+      justify-content: space-between;
+      color: $color-grey;
+      border-bottom: 1px solid $color-grey;
+      width: 100%;
+      a {
+        text-decoration: none;
+        color: $color-grey;
+        font-size: 1.8rem;
+        width: 80%;
+        margin-top: 15px;
+        margin-left: 30px;
+        margin-bottom: 15px;
+      }
+      i {
+        margin-top: 15px;
+        width: 20%;
+        cursor: pointer;
+      }
+    }
+  }
+  h3,
+  p {
+    width: 80%;
+    margin: 30px auto;
+  }
+  h3 {
+    margin-top: 80px;
+    color: black;
+  }
+  p {
+    color: $color-grey;
+  }
+  .closeMenu {
+    margin-left: 30px;
+    margin-top: 20px;
+    color: $color-grey;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 699px) {
+  .nav-ul {
+    display: none;
+  }
+}
+@media screen and (min-width: 700px) {
+  .nav-ul {
+    display: none;
+  }
+}
+@media screen and (min-width: 1030px) {
+  .nav-ul {
+    display: flex;
+  }
+  .hamburgerIcon {
+    display: none;
   }
 }

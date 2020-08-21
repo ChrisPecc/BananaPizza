@@ -77,6 +77,12 @@ footer {
           margin-top: 5px;
           margin-bottom: 5px;
         }
+        .day-line {
+          flex: 1;
+          hr {
+            width: 100%;
+          }
+        }
       }
     }
 
