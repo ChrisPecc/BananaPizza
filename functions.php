@@ -20,7 +20,15 @@ if (function_exists('acf_add_options_page')) {
         'parent_slug'	=> 'theme-general-settings',
     ));
 }
+
 function add_normalize_CSS()
 {
     wp_enqueue_style('normalize-styles', "https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css");
 }
+
+function additional_custom_styles()
+{
+    /*Enqueue The Styles*/
+    wp_enqueue_style( 'recette-style', get_stylesheet_directory_uri() . '/recette-style.css' ); 
+}
+add_action( 'wp_enqueue_scripts', 'additional_custom_styles' );
