@@ -15,4 +15,4 @@ The CPT UI extension has been used to create a custom post dedicated to make rec
 
 SASS is used to generate the CSS.
 A dedicated CSS file is used to design the recipe page. It has been linked via the functions file.
-The mobile version of the recipe page is done.
+The mobile and tablet versions of the recipe page are globally done.
