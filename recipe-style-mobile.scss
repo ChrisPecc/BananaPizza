@@ -1,0 +1,196 @@
+body
+{
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	color: #292929;
+
+	.intro // <div>
+	{
+		background-color: #292929;
+		color: rgb(255, 255, 255);
+		padding: 0 0 30px 0;
+
+		.intro__little-menu // <div>
+		{
+			.intro__back // <div>
+			{
+				padding: 0 20px 0 20px;
+				margin: 0 0 50px 0;
+
+				.intro__link::before
+				{
+					content: '\2190';
+					font-size: 1.5rem;
+				}
+				.intro__link // <a>
+				{
+					color: inherit;
+					text-decoration: none;
+					font-size: 12px;
+					font-weight: 500;
+				}
+			}
+
+			.intro__infos // <div>
+			{
+				padding: 0 20px 0 20px;
+				font-size: 16px;
+				font-weight: 500;
+				margin: 0 0 40px 0;
+
+				.intro__list // <ul>
+				{
+					display: flex;
+					width: 100%;
+					flex-direction: row;
+					justify-content: space-between;
+					list-style: none;
+					margin: 0;
+					padding: 0;
+
+					.intro__date // <li>
+					{
+						text-transform: uppercase;
+    				}
+
+                	.intro__category // <li>
+					{
+						.intro__image // <figure>
+						{
+							width: 1rem;
+							margin: 0;
+							display: inline-block;
+							filter: invert(100%);
+						}
+					}
+				}
+			}
+		}
+
+		.intro__main-title // <h1>
+		{
+			font-size: 40px;
+			font-weight: 600;
+			padding: 0 20px 0 20px;
+			margin: 0 0 40px 0;
+		}
+
+		.intro__short-description // <p>
+		{
+			font-size: 16px;
+			font-weight: 500;
+			padding: 0 20px 0 20px;
+		}
+	}
+
+	.illustration // <figure>
+	{
+		margin: 0 0 50px 0;
+		width: 100%;
+
+		.illustration__image // <img>
+		{
+			width: 100%;
+		}
+	}
+
+	.ingredients // <section>
+	{
+		padding: 0 20px 0 20px;
+
+		.ingredients__title // <h2>
+		{
+			font-size: 25px;
+			font-weight: 600;
+			margin: 0 0 30px 0;
+		}
+
+		.ingredients__content // <div>
+		{
+			font-size: 12px;
+			font-weight: 400;
+
+			ul
+			{
+				padding: 0;
+				list-style: inside;
+			}
+		}
+	}
+
+	.instructions // <section>
+	{
+		.instructions__title // <h2>
+		{
+			font-size: 25px;
+			font-weight: 600;
+			padding: 0 20px 0 20px;
+		}
+
+		.instructions__content // <div>
+		{
+			font-size: 16px;
+			font-weight: 300;
+
+			.instructions__list // <ol>
+			{
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+				counter-reset: section 0;
+
+				.instructions__item // <li>
+				{
+					padding: 0 20px 0 20px;
+				}
+
+				.instructions__item::before // <li>
+				{
+					counter-increment: section;
+					content: counter(section);
+					display: inline-block;
+					width: 25px;
+					height: 25px;
+					line-height: 25px;
+					border-radius: 25px;
+					text-align: center;
+					font-weight: 700;
+					color: rgb(255, 255, 255);
+					background-color: #292929;
+					margin: 0 10px 0 0;
+					vertical-align: top;
+				}
+
+				p
+				{
+					display: inline-block;
+					margin: 0 0 20px 0;
+					padding: 0 0 0 35px;
+				}
+
+				p:first-of-type
+				{
+					padding: 0;
+					max-width: calc(100% - 35px);
+				}
+
+				p:last-of-type
+				{
+					margin: 0 0 50px 0;
+				}
+			}
+
+			.instructions__image-box // <figure>
+			{
+				margin: 0 0 50px 0;
+				width: 100%;
+
+				.instructions__image // <img>
+				{
+					width: 100%;
+				}
+			}
+		}
+	}
+}
