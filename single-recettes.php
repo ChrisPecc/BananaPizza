@@ -13,22 +13,24 @@
 
 <main>
 	<div class='intro'>
-		<div class='intro__back'>
-			<a href='<?php wp_redirect(''); ?>' class='intro__link'>Retour</a>
-		</div>
+		<div class="intro__little-menu">
+			<div class='intro__back'>
+				<a href='<?php wp_redirect(''); ?>' class='intro__link'>Retour</a>
+			</div>
 
-		<div class='intro__infos'>
-			<ul class='intro__list'>
-				<li class='intro__date'>
-					<?php the_field('date'); ?>
-				</li>
-				<li class='intro__category'>
-					<figure class='intro__image'>
-						<img src='<?php bloginfo('url'); ?>/wp-content/themes/BananaPizza/assets/svg/cutelry.svg' />
-					</figure>
-					<?php the_field('category'); ?>
-				</li>
-			</ul>
+			<div class='intro__infos'>
+				<ul class='intro__list'>
+					<li class='intro__date'>
+						<?php the_field('date'); ?>
+					</li>
+					<li class='intro__category'>
+						<figure class='intro__image'>
+							<img src='<?php bloginfo('url'); ?>/wp-content/themes/BananaPizza/assets/svg/cutelry.svg' />
+						</figure>
+						<?php the_field('category'); ?>
+					</li>
+				</ul>
+			</div>
 		</div>
 
 		<h1 class='intro__main-title'>
