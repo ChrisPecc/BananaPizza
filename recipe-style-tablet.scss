@@ -1,0 +1,188 @@
+body
+{
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	color: #292929;
+	
+	.intro // <div>
+	{
+		background-color: #292929;
+		color: rgb(255, 255, 255);
+		padding: 0 70px 30px 70px;
+
+		.intro__little-menu // <div>
+		{
+			display: flex;
+			flex-direction: row;
+			margin: 0 0 100px 0;
+
+			.intro__back // <div>
+			{
+				display: inline-block;
+				padding: 0 20px 0 0;
+				box-sizing: border-box;
+				border-right-style: solid;
+				border-right-width: 1px;
+				border-right-color: rgb(255, 255, 255);
+
+				.intro__link::before
+				{
+					content: '\2190';
+					font-size: 2rem;
+				}
+			
+				.intro__link // <a>
+				{
+					color: inherit;
+					text-decoration: none;
+					font-weight: 500;
+				}
+			}
+
+			.intro__infos // <div>
+			{
+				display: flex;
+				align-self: center;
+				width: 100%;
+				padding: 0 0 0 20px;
+				font-weight: 500;
+
+				.intro__list // <ul>
+				{
+					display: grid;
+					grid-template-columns: 1fr 1fr;
+					list-style: none;
+					margin: 0;
+					padding: 0;
+
+					.intro__date // <li>
+					{
+						justify-self: start;
+					}
+
+					.intro__category // <li>
+					{
+						justify-self: end;
+
+						.intro__image // <figure>
+						{
+							display: inline-block;
+							width: 1rem;
+							margin: 0;
+							filter: invert(100%);
+						}
+					}
+				}
+			}
+		}
+
+		.intro__main-title // <h1>
+		{
+			margin: 0 0 50px 0;
+		}
+
+		.intro__short-description // <p>
+		{
+			font-weight: 500;
+		}
+	}
+
+	.illustration // <figure>
+	{
+		margin: 0 0 50px 0;
+		width: 100%;
+
+		.illustration__image // <img>
+		{
+			width: 100%;
+		}
+	}
+
+	.ingredients // <section>
+	{
+		padding: 0 70px 0 70px;
+		margin-bottom: 100px;
+
+		ul
+		{
+			margin-left: 20px;
+			padding-left: 0;
+
+			li
+			{
+				padding-left: 40px;
+			}
+		}
+	}
+
+	.instructions // <section>
+	{
+		.instructions__title // <h2>
+		{
+			padding: 0 70px 0 70px;
+		}
+
+		.instructions__content // <div>
+		{
+			.instructions__list // <ol>
+			{
+				list-style: none;
+				counter-reset: section 0;
+				margin: 0;
+				padding-left: 0;
+				
+				.instructions__item::before // <li>
+				{
+					counter-increment: section;
+					content: counter(section);
+					display: inline-block;
+					width: 25px;
+					height: 25px;
+					line-height: 25px;
+					border-radius: 25px;
+					text-align: center;
+					font-weight: 700;
+					color: rgb(255, 255, 255);
+					background-color: #292929;
+					margin: 0 10px 0 0;
+					vertical-align: top;
+				}
+
+				.instructions__item // <li>
+				{
+					padding: 0 70px 0 70px;
+				}
+
+				p
+				{
+					display: inline-block;
+					margin: 0 0 20px 0;
+					padding: 0 0 0 35px;
+				}
+
+				p:first-of-type
+				{
+					padding: 0;
+					max-width: calc(100% - 35px);
+				}
+
+				p:last-of-type
+				{
+					margin: 0 0 40px 0;
+				}
+
+				.instructions__image-box // <figure>
+				{
+					margin: 0 0 40px 0;
+					width: 100%;
+
+					.instructions__image // <img>
+					{
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
+}
