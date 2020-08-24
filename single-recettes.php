@@ -88,16 +88,16 @@
 
 	<div class='social-networks'>
 		<div class='social-networks__facebook'>
-			<a href=''><img src='<?php bloginfo('url'); ?>/wp-content/themes/BananaPizza/assets/svg/facebook.svg' alt='Facebook' /></a>
+			<a href='' class='social-networks__link'><img src='<?php bloginfo('url'); ?>/wp-content/themes/BananaPizza/assets/svg/facebook.svg' alt='Facebook' class='social-networks__icon' /></a>
 		</div>
 		<div class='social-networks__twitter'>
-			<a href=''><img src='<?php bloginfo('url'); ?>/wp-content/themes/BananaPizza/assets/svg/twitter.svg' alt='Twitter' /></a>
+			<a href='' class='social-networks__link'><img src='<?php bloginfo('url'); ?>/wp-content/themes/BananaPizza/assets/svg/twitter.svg' alt='Twitter' class='social-networks__icon' /></a>
 		</div>
 		<div class='social-networks__instagram'>
-			<a href=''><img src='<?php bloginfo('url'); ?>/wp-content/themes/BananaPizza/assets/svg/instagram.svg' alt='Instagram' /></a>
+			<a href='' class='social-networks__link'><img src='<?php bloginfo('url'); ?>/wp-content/themes/BananaPizza/assets/svg/instagram.svg' alt='Instagram' class='social-networks__icon' /></a>
 		</div>
 		<div class='social-network__mail'>
-			<a href=''><img src='<?php bloginfo('url'); ?>/wp-content/themes/BananaPizza/assets/svg/mail-2.svg' alt='Mail' /></a>
+			<a href='' class='social-networks__link'><img src='<?php bloginfo('url'); ?>/wp-content/themes/BananaPizza/assets/svg/mail-2.svg' alt='Mail' class='social-networks__icon' /></a>
 		</div>
 	</div>
 </main>
