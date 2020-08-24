@@ -11,76 +11,78 @@ body
 		color: rgb(255, 255, 255);
 		padding: 0 0 30px 0;
 
-		.intro__little-menu // <div>
+		.intro__margins // <div>
 		{
-			.intro__back // <div>
-			{
-				padding: 0 20px 0 20px;
-				margin: 0 0 50px 0;
+			margin: 0 20px 0 20px;
 
-				.intro__link::before
+			.intro__little-menu // <div>
+			{
+				.intro__back // <div>
 				{
-					content: '\2190';
-					font-size: 1.5rem;
+					margin: 0 0 50px 0;
+
+					.intro__link::before
+					{
+						content: '\2190';
+						font-size: 1.5rem;
+					}
+
+					.intro__link // <a>
+					{
+						color: inherit;
+						text-decoration: none;
+						font-size: 12px;
+						font-weight: 500;
+					}
 				}
-				.intro__link // <a>
+
+				.intro__infos // <div>
 				{
-					color: inherit;
-					text-decoration: none;
-					font-size: 12px;
+					font-size: 16px;
 					font-weight: 500;
-				}
-			}
+					margin: 0 0 40px 0;
 
-			.intro__infos // <div>
-			{
-				padding: 0 20px 0 20px;
-				font-size: 16px;
-				font-weight: 500;
-				margin: 0 0 40px 0;
-
-				.intro__list // <ul>
-				{
-					display: flex;
-					width: 100%;
-					flex-direction: row;
-					justify-content: space-between;
-					list-style: none;
-					margin: 0;
-					padding: 0;
-
-					.intro__date // <li>
+					.intro__list // <ul>
 					{
-						text-transform: uppercase;
-    				}
+						display: flex;
+						width: 100%;
+						flex-direction: row;
+						justify-content: space-between;
+						list-style: none;
+						margin: 0;
+						padding: 0;
 
-                	.intro__category // <li>
-					{
-						.intro__image // <figure>
+						.intro__date // <li>
 						{
-							width: 1rem;
-							margin: 0;
-							display: inline-block;
-							filter: invert(100%);
+							text-transform: uppercase;
+    					}
+
+                		.intro__category // <li>
+						{
+							.intro__image // <figure>
+							{
+								width: 1rem;
+								margin: 0;
+								display: inline-block;
+								filter: invert(100%);
+							}
 						}
 					}
 				}
 			}
-		}
 
-		.intro__main-title // <h1>
-		{
-			font-size: 40px;
-			font-weight: 600;
-			padding: 0 20px 0 20px;
-			margin: 0 0 40px 0;
-		}
+			.intro__main-title // <h1>
+			{
+				font-size: 40px;
+				font-weight: 600;
+				margin: 0 0 40px 0;
+			}
 
-		.intro__short-description // <p>
-		{
-			font-size: 16px;
-			font-weight: 500;
-			padding: 0 20px 0 20px;
+			.intro__short-description // <p>
+			{
+				font-size: 16px;
+				font-weight: 500;
+			}
 		}
 	}
 
@@ -97,19 +99,20 @@ body
 
 	.ingredients // <section>
 	{
-		padding: 0 20px 0 20px;
+		margin: 0 0 30px 0;
 
 		.ingredients__title // <h2>
 		{
 			font-size: 25px;
 			font-weight: 600;
-			margin: 0 0 30px 0;
+			margin: 0 20px 30px 20px;
 		}
 
 		.ingredients__content // <div>
 		{
 			font-size: 12px;
 			font-weight: 400;
+			margin: 0 20px 0 20px;
 
 			ul
 			{
@@ -125,7 +128,7 @@ body
 		{
 			font-size: 25px;
 			font-weight: 600;
-			padding: 0 20px 0 20px;
+			margin: 0 20px 30px 20px;
 		}
 
 		.instructions__content // <div>
@@ -135,15 +138,9 @@ body
 
 			.instructions__list // <ol>
 			{
-				margin: 0;
 				padding: 0;
 				list-style-type: none;
 				counter-reset: section 0;
-
-				.instructions__item // <li>
-				{
-					padding: 0 20px 0 20px;
-				}
 
 				.instructions__item::before // <li>
 				{
@@ -162,22 +159,27 @@ body
 					vertical-align: top;
 				}
 
-				p
+				.instructions__item // <li>
 				{
-					display: inline-block;
-					margin: 0 0 20px 0;
-					padding: 0 0 0 35px;
-				}
+					margin: 0 20px 0 20px;
+					
+					p
+					{
+						margin: 0 0 20px 35px;
+					}
 
-				p:first-of-type
-				{
-					padding: 0;
-					max-width: calc(100% - 35px);
-				}
+					p:first-of-type
+					{
+						display: inline-block;
+						margin: 0;
+						max-width: calc(100% - 35px);
+					}
 
-				p:last-of-type
-				{
-					margin: 0 0 50px 0;
+					p:last-of-type
+					{
+						display: inline-block;
+						margin: 0 0 50px inherit;
+					}
 				}
 			}
 
