@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CACJ;EACC,MAAM,EAAE,CAAC;EACT,WAAW,EAAE,qBAAqB;EAClC,WAAW,EAAE,GAAG;EAChB,KAAK,EAAE,OAAO;CASd;;AAdD,AAOC,IAPG,CAOH,MAAM,CACN;EACC,gBAAgB,EAAE,OAAO;EACzB,KAAK,EAAE,KAAkB;EACzB,KAAK,EAAE,GAAG;EACV,OAAO,EAAE,cAAc;CACvB",
+    "sources": [
+        "recipe-style-desktop.scss"
+    ],
+    "names": [],
+    "file": "recipe-style-desktop.css"
+}
