@@ -123,6 +123,42 @@
             </div>
         </section>
 
+        <section class="ourmenu">
+            <div class="ourmenu-container">
+                <div class="menu-img-container">
+                    <div class="menu-grid">
+                        <div class="menu-img">
+                            <img class="menu-image" src="<?php echo get_field('img1', 116); ?>">
+                        </div>
+        
+                        <div class="menu-img">
+                            <img class="menu-image" src="<?php echo get_field('img2', 116); ?>">
+                        </div>
+        
+                        <div class="menu-img">
+                            <img class="menu-image" src="<?php echo get_field('img3', 116); ?>">
+                        </div>
+        
+                        <div class="menu-img">
+                            <img class="menu-image" src="<?php echo get_field('img4', 116); ?>">
+                        </div>
+                    </div>
+                    
+                </div>
+    
+                <div class="menu-text-container">
+                    <p class="subtitles2"><?php the_field('menu_subtitle', 116) ?></p>
+                    <h2 class="title2"><?php the_field('menu_title', 116) ?></h2>
+                    <p class="menu-text"><?php the_field('menu_text', 116) ?></p>
+                    <a class="submit-btn" href="<?php the_field('menu_intern_link')?>">View the full menu</a>
+
+    
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
     <?php
     get_footer();

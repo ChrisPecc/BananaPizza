@@ -295,6 +295,27 @@ body {
     padding: 15px 30px 15px 30px;
     margin: 15px auto 15px auto;
   }
+  .ourmenu {
+    padding: 0 9% 0 9%;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .ourmenu .menu-img-container {
+    display: none;
+  }
+  .ourmenu .menu-text {
+    line-height: 250%;
+    margin-bottom: 50px;
+  }
+  .ourmenu .submit-btn {
+    border: none;
+    background-color: #292929;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 15px 30px 15px 30px;
+    margin: 15px auto 15px auto;
+  }
 }
 
 @media only screen and (min-width: 421px) and (max-width: 800px) {
@@ -490,6 +511,31 @@ body {
     font-weight: bold;
     padding: 15px 30px 15px 30px;
     margin: 15px auto 15px auto;
+  }
+  .ourmenu {
+    padding: 0 9% 0 9%;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .ourmenu .menu-img-container {
+    display: none;
+  }
+  .ourmenu .menu-text {
+    line-height: 3;
+    margin-bottom: 50px;
+  }
+  .ourmenu .submit-btn {
+    border: none;
+    background-color: #292929;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 15px 30px 15px 30px;
+    margin: 15px auto 15px auto;
+  }
+  .ourmenu .submit-btn::active {
+    color: #FFF;
   }
 }
 
@@ -745,6 +791,76 @@ body {
     font-weight: bold;
     padding: 15px 30px 15px 30px;
     margin: 15px auto 15px auto;
+  }
+  .ourmenu {
+    padding: 0 15% 0 15%;
+    text-align: center;
+    margin: 250px 0 150px 0;
+  }
+  .ourmenu .ourmenu-container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .ourmenu .ourmenu-container .menu-img-container {
+    width: 45%;
+    margin: auto;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .ourmenu .ourmenu-container .menu-img-container .menu-grid {
+    max-width: 615px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 48% 48%;
+        grid-template-columns: 48% 48%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    -webkit-column-gap: 15px;
+            column-gap: 15px;
+    row-gap: 15px;
+    margin: auto auto auto 0;
+  }
+  .ourmenu .ourmenu-container .menu-img-container .menu-grid .menu-img {
+    max-width: 300px;
+    max-height: 300px;
+  }
+  .ourmenu .ourmenu-container .menu-img-container .menu-grid .menu-img .menu-image {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 50%;
+       object-position: 50% 50%;
+  }
+  .ourmenu .ourmenu-container .menu-text-container {
+    width: 45%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin: auto 0 auto 0;
+  }
+  .ourmenu .ourmenu-container .menu-text-container .menu-text {
+    line-height: 3;
+    margin-bottom: 50px;
+  }
+  .ourmenu .ourmenu-container .menu-text-container .submit-btn {
+    border: none;
+    background-color: #292929;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 15px 30px 15px 30px;
+    margin: 15px auto 15px auto;
+  }
+  .ourmenu .ourmenu-container .menu-text-container .submit-btn::active {
+    color: #FFF;
   }
 }
 /*# sourceMappingURL=style.css.map */
