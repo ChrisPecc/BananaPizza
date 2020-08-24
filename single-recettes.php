@@ -85,6 +85,21 @@
 			</ol>
 		</div>
 	</section>
+
+	<div class='social-networks'>
+		<div class='social-networks__facebook'>
+			<a href=''><img src='<?php bloginfo('url'); ?>/wp-content/themes/BananaPizza/assets/svg/facebook.svg' alt='Facebook' /></a>
+		</div>
+		<div class='social-networks__twitter'>
+			<a href=''><img src='<?php bloginfo('url'); ?>/wp-content/themes/BananaPizza/assets/svg/twitter.svg' alt='Twitter' /></a>
+		</div>
+		<div class='social-networks__instagram'>
+			<a href=''><img src='<?php bloginfo('url'); ?>/wp-content/themes/BananaPizza/assets/svg/instagram.svg' alt='Instagram' /></a>
+		</div>
+		<div class='social-network__mail'>
+			<a href=''><img src='<?php bloginfo('url'); ?>/wp-content/themes/BananaPizza/assets/svg/mail-2.svg' alt='Mail' /></a>
+		</div>
+	</div>
 </main>
 
 
