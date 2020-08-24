@@ -15,10 +15,6 @@ body .intro .intro__little-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   margin: 0 0 100px 0;
 }
 
@@ -34,7 +30,6 @@ body .intro .intro__little-menu .intro__back {
 
 body .intro .intro__little-menu .intro__back .intro__link::before {
   content: '\2190';
-  font-size: 2rem;
 }
 
 body .intro .intro__little-menu .intro__back .intro__link {
@@ -47,8 +42,6 @@ body .intro .intro__little-menu .intro__infos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: center;
-      align-self: center;
   width: 100%;
   padding: 0 0 0 20px;
   font-weight: 500;
@@ -59,6 +52,7 @@ body .intro .intro__little-menu .intro__infos .intro__list {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
+  width: 100%;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -166,5 +160,95 @@ body .instructions .instructions__content .instructions__list .instructions__ima
 
 body .instructions .instructions__content .instructions__list .instructions__image-box .instructions__image {
   width: 100%;
+}
+
+body .social-networks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 50px 0 150px 0;
+  padding: 0 70px 0 70px;
+}
+
+body .social-networks .social-networks__facebook {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #3B5998;
+  margin-right: 10px;
+}
+
+body .social-networks .social-networks__facebook .social-networks__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .social-networks .social-networks__twitter {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #1DA1F2;
+  margin-right: 10px;
+}
+
+body .social-networks .social-networks__twitter .social-networks__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .social-networks .social-networks__instagram {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #C24A84;
+  margin-right: 10px;
+}
+
+body .social-networks .social-networks__instagram .social-networks__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .social-networks .social-networks__mail {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #000000;
+}
+
+body .social-networks .social-networks__mail .social-networks__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=recipe-style-tablet.css.map */

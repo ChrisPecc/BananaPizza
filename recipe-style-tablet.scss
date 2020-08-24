@@ -14,7 +14,6 @@ body
 		.intro__little-menu // <div>
 		{
 			display: flex;
-			flex-direction: row;
 			margin: 0 0 100px 0;
 
 			.intro__back // <div>
@@ -29,7 +28,6 @@ body
 				.intro__link::before
 				{
 					content: '\2190';
-					font-size: 2rem;
 				}
 			
 				.intro__link // <a>
@@ -43,7 +41,6 @@ body
 			.intro__infos // <div>
 			{
 				display: flex;
-				align-self: center;
 				width: 100%;
 				padding: 0 0 0 20px;
 				font-weight: 500;
@@ -52,6 +49,7 @@ body
 				{
 					display: grid;
 					grid-template-columns: 1fr 1fr;
+					width: 100%;
 					list-style: none;
 					margin: 0;
 					padding: 0;
@@ -183,6 +181,59 @@ body
 					}
 				}
 			}
+		}
+	}
+
+	.social-networks // <section>
+	{
+		display: flex;
+		justify-content: flex-end;
+		margin: 50px 0 150px 0;
+		padding: 0 70px 0 70px;
+
+		$margin-bottom-10px: 10px;
+
+		@mixin box-icon
+		{
+			width: 40px;
+			height: 40px;
+			border-radius: 40px;
+
+			.social-networks__link // <a>
+			{
+				display: flex;
+				width: inherit;
+				height: inherit;
+				border-radius: inherit;
+				justify-content: center;
+			}
+		}
+
+		.social-networks__facebook // <div>
+		{
+			@include box-icon;
+			background-color: #3B5998;
+			margin-right: $margin-bottom-10px;
+		}
+
+		.social-networks__twitter // <div>
+		{
+			@include box-icon;
+			background-color: #1DA1F2;
+			margin-right: $margin-bottom-10px;
+		}
+
+		.social-networks__instagram // <div>
+		{
+			@include box-icon;
+			background-color: #C24A84;
+			margin-right: $margin-bottom-10px;
+		}
+
+		.social-networks__mail // <div>
+		{
+			@include box-icon;
+			background-color: #000000;
 		}
 	}
 }
