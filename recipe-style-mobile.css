@@ -175,7 +175,7 @@ body .social-networks {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin-bottom: 150px;
+  margin: 50px 0 150px 0;
   padding: 0 20px 0 20px;
 }
 
