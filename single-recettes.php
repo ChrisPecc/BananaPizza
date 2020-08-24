@@ -88,16 +88,16 @@
 
 	<div class='social-networks'>
 		<div class='social-networks__facebook'>
-			<a href='' class='social-networks__link'><img src='<?php bloginfo('url'); ?>/wp-content/themes/BananaPizza/assets/svg/facebook.svg' alt='Facebook' class='social-networks__icon' /></a>
+			<a href='' class='social-networks__link'><img src='<?php bloginfo('url'); ?>/wp-content/themes/BananaPizza/assets/svg/facebook.svg' alt='Facebook' /></a>
 		</div>
 		<div class='social-networks__twitter'>
-			<a href='' class='social-networks__link'><img src='<?php bloginfo('url'); ?>/wp-content/themes/BananaPizza/assets/svg/twitter.svg' alt='Twitter' class='social-networks__icon' /></a>
+			<a href='' class='social-networks__link'><img src='<?php bloginfo('url'); ?>/wp-content/themes/BananaPizza/assets/svg/twitter.svg' alt='Twitter' /></a>
 		</div>
 		<div class='social-networks__instagram'>
-			<a href='' class='social-networks__link'><img src='<?php bloginfo('url'); ?>/wp-content/themes/BananaPizza/assets/svg/instagram.svg' alt='Instagram' class='social-networks__icon' /></a>
+			<a href='' class='social-networks__link'><img src='<?php bloginfo('url'); ?>/wp-content/themes/BananaPizza/assets/svg/instagram.svg' alt='Instagram' /></a>
 		</div>
-		<div class='social-network__mail'>
-			<a href='' class='social-networks__link'><img src='<?php bloginfo('url'); ?>/wp-content/themes/BananaPizza/assets/svg/mail-2.svg' alt='Mail' class='social-networks__icon' /></a>
+		<div class='social-networks__mail'>
+			<a href='' class='social-networks__link'><img src='<?php bloginfo('url'); ?>/wp-content/themes/BananaPizza/assets/svg/mail-2.svg' alt='Mail' /></a>
 		</div>
 	</div>
 </main>
