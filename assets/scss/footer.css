@@ -120,6 +120,16 @@ footer {
   margin-bottom: 5px;
 }
 
+.footer-container .footer-contact-hour .footer-days-open .footer-days-hour .day-line {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.footer-container .footer-contact-hour .footer-days-open .footer-days-hour .day-line hr {
+  width: 100%;
+}
+
 .footer-container .footer-contact-hour .footer-contact {
   display: -webkit-box;
   display: -ms-flexbox;
