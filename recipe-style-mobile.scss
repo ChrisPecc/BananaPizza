@@ -193,4 +193,57 @@ body
 			}
 		}
 	}
+
+	.social-networks // <div>
+	{
+		display: flex;
+		justify-content: flex-end;
+		margin-bottom: 150px;
+		padding: 0 20px 0 20px;
+
+		$margin-bottom-10px: 10px;
+
+		@mixin box-icon
+		{
+			width: 40px;
+			height: 40px;
+			border-radius: 40px;
+
+			.social-networks__link // <a>
+			{
+				display: flex;
+				width: inherit;
+				height: inherit;
+				border-radius: inherit;
+				justify-content: center;
+			}
+		}
+
+		.social-networks__facebook // <div>
+		{
+			@include box-icon;
+			background-color: #3B5998;
+			margin-right: $margin-bottom-10px;
+		}
+
+		.social-networks__twitter // <div>
+		{
+			@include box-icon;
+			background-color: #1DA1F2;
+			margin-right: $margin-bottom-10px;
+		}
+
+		.social-networks__instagram // <div>
+		{
+			@include box-icon;
+			background-color: #C24A84;
+			margin-right: $margin-bottom-10px;
+		}
+
+		.social-networks__mail // <div>
+		{
+			@include box-icon;
+			background-color: #000000;
+		}
+	}
 }

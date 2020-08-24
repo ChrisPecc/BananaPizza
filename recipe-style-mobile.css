@@ -167,4 +167,94 @@ body .instructions .instructions__content .instructions__image-box {
 body .instructions .instructions__content .instructions__image-box .instructions__image {
   width: 100%;
 }
+
+body .social-networks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 150px;
+  padding: 0 20px 0 20px;
+}
+
+body .social-networks .social-networks__facebook {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #3B5998;
+  margin-right: 10px;
+}
+
+body .social-networks .social-networks__facebook .social-networks__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .social-networks .social-networks__twitter {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #1DA1F2;
+  margin-right: 10px;
+}
+
+body .social-networks .social-networks__twitter .social-networks__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .social-networks .social-networks__instagram {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #C24A84;
+  margin-right: 10px;
+}
+
+body .social-networks .social-networks__instagram .social-networks__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .social-networks .social-networks__mail {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #000000;
+}
+
+body .social-networks .social-networks__mail .social-networks__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
 /*# sourceMappingURL=recipe-style-mobile.css.map */
