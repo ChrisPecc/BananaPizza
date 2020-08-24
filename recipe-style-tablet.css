@@ -8,17 +8,21 @@ body {
 body .intro {
   background-color: #292929;
   color: white;
-  padding: 0 70px 30px 70px;
+  padding: 0 0 30px 0;
 }
 
-body .intro .intro__little-menu {
+body .intro .intro__margins {
+  margin: 0 70px 0 70px;
+}
+
+body .intro .intro__margins .intro__little-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 0 0 100px 0;
 }
 
-body .intro .intro__little-menu .intro__back {
+body .intro .intro__margins .intro__little-menu .intro__back {
   display: inline-block;
   padding: 0 20px 0 0;
   -webkit-box-sizing: border-box;
@@ -28,17 +32,17 @@ body .intro .intro__little-menu .intro__back {
   border-right-color: white;
 }
 
-body .intro .intro__little-menu .intro__back .intro__link::before {
+body .intro .intro__margins .intro__little-menu .intro__back .intro__link::before {
   content: '\2190';
 }
 
-body .intro .intro__little-menu .intro__back .intro__link {
+body .intro .intro__margins .intro__little-menu .intro__back .intro__link {
   color: inherit;
   text-decoration: none;
   font-weight: 500;
 }
 
-body .intro .intro__little-menu .intro__infos {
+body .intro .intro__margins .intro__little-menu .intro__infos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,7 +51,7 @@ body .intro .intro__little-menu .intro__infos {
   font-weight: 500;
 }
 
-body .intro .intro__little-menu .intro__infos .intro__list {
+body .intro .intro__margins .intro__little-menu .intro__infos .intro__list {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -58,17 +62,17 @@ body .intro .intro__little-menu .intro__infos .intro__list {
   padding: 0;
 }
 
-body .intro .intro__little-menu .intro__infos .intro__list .intro__date {
+body .intro .intro__margins .intro__little-menu .intro__infos .intro__list .intro__date {
   -ms-grid-column-align: start;
       justify-self: start;
 }
 
-body .intro .intro__little-menu .intro__infos .intro__list .intro__category {
+body .intro .intro__margins .intro__little-menu .intro__infos .intro__list .intro__category {
   -ms-grid-column-align: end;
       justify-self: end;
 }
 
-body .intro .intro__little-menu .intro__infos .intro__list .intro__category .intro__image {
+body .intro .intro__margins .intro__little-menu .intro__infos .intro__list .intro__category .intro__image {
   display: inline-block;
   width: 1rem;
   margin: 0;
@@ -76,12 +80,13 @@ body .intro .intro__little-menu .intro__infos .intro__list .intro__category .int
           filter: invert(100%);
 }
 
-body .intro .intro__main-title {
+body .intro .intro__margins .intro__main-title {
   margin: 0 0 50px 0;
 }
 
-body .intro .intro__short-description {
+body .intro .intro__margins .intro__short-description {
   font-weight: 500;
+  margin-bottom: 0;
 }
 
 body .illustration {
@@ -94,8 +99,7 @@ body .illustration .illustration__image {
 }
 
 body .ingredients {
-  padding: 0 70px 0 70px;
-  margin-bottom: 100px;
+  margin: 0 70px 100px 70px;
 }
 
 body .ingredients ul {
@@ -108,7 +112,7 @@ body .ingredients ul li {
 }
 
 body .instructions .instructions__title {
-  padding: 0 70px 0 70px;
+  margin: 0 70px 20px 70px;
 }
 
 body .instructions .instructions__content .instructions__list {
@@ -135,22 +139,22 @@ body .instructions .instructions__content .instructions__list .instructions__ite
 }
 
 body .instructions .instructions__content .instructions__list .instructions__item {
-  padding: 0 70px 0 70px;
+  margin: 0 70px 0 70px;
 }
 
-body .instructions .instructions__content .instructions__list p {
+body .instructions .instructions__content .instructions__list .instructions__item p {
+  margin: 0 0 20px 35px;
+}
+
+body .instructions .instructions__content .instructions__list .instructions__item p:first-of-type {
   display: inline-block;
-  margin: 0 0 20px 0;
-  padding: 0 0 0 35px;
-}
-
-body .instructions .instructions__content .instructions__list p:first-of-type {
+  margin-left: 0;
   padding: 0;
   max-width: calc(100% - 35px);
 }
 
-body .instructions .instructions__content .instructions__list p:last-of-type {
-  margin: 0 0 40px 0;
+body .instructions .instructions__content .instructions__list .instructions__item p:last-of-type {
+  margin: 0 0 40px inherit;
 }
 
 body .instructions .instructions__content .instructions__list .instructions__image-box {
@@ -169,8 +173,7 @@ body .social-networks {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin: 50px 0 150px 0;
-  padding: 0 70px 0 70px;
+  margin: 50px 70px 150px 70px;
 }
 
 body .social-networks .social-networks__facebook {
