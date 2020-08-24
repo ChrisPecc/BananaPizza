@@ -158,8 +158,8 @@ body {
   }
   .banner-top .img-container .banner-image {
     height: 100%;
-    -o-object-position: 100% 50%;
-       object-position: 100% 50%;
+    -o-object-position: 50% 50%;
+       object-position: 50% 50%;
     -webkit-filter: brightness(40%);
             filter: brightness(40%);
   }
@@ -514,7 +514,7 @@ body {
     text-transform: uppercase;
   }
   .banner-top {
-    min-height: 1000px;
+    height: 1000px;
     overflow: hidden;
     position: relative;
   }
@@ -523,15 +523,19 @@ body {
     height: 100%;
   }
   .banner-top .img-container .banner-image {
-    height: 100%;
-    -o-object-position: 100% 50%;
-       object-position: 100% 50%;
+    width: 100%;
+    min-height: 1000px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 100%;
+       object-position: 50% 100%;
     -webkit-filter: brightness(40%);
             filter: brightness(40%);
   }
   .banner-top .img-container .banner-hash {
     position: absolute;
     bottom: 0px;
+    left: 0px;
     -webkit-transform: rotate(180deg) translateX(20px) translateY(-5px);
             transform: rotate(180deg) translateX(20px) translateY(-5px);
     width: 300%;
@@ -540,18 +544,18 @@ body {
     color: #FFF;
     font-size: 60px;
     font-weight: normal;
-    padding: 0 9% 0 9%;
+    padding: 0 9% 280px 9%;
     position: absolute;
-    bottom: 68%;
+    bottom: 40%;
     z-index: 42;
   }
   .banner-top .title {
     color: #FFF;
-    font-size: 100px;
-    font-weight: SemiBold;
-    padding: 0 9% 0 9%;
-    z-index: 42;
+    width: 938px;
     position: absolute;
+    font-size: 100px;
+    font-weight: 600;
+    padding: 0 9% 0 9%;
     bottom: 40%;
     line-height: 1.15em;
     text-transform: uppercase;
@@ -574,6 +578,173 @@ body {
     -webkit-transform: translateY(-4px);
             transform: translateY(-4px);
     margin-right: 10px;
+  }
+  .banner-presentation {
+    background-color: #F5F5F5;
+    margin: 0;
+    padding: 30px 0 30px 0;
+  }
+  .banner-presentation .subtitles2 {
+    padding: 0 9% 0 9%;
+    margin: 0;
+  }
+  .banner-presentation .title2 {
+    padding: 0 9% 0 9%;
+  }
+  .banner-presentation .info-container1 {
+    margin: 60px 0 90px 0;
+    padding: 0 9% 0 9%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .banner-presentation .info-container2 {
+    margin: 60px 0 90px 0;
+    padding: 0 9% 0 9%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .banner-presentation .info-picture {
+    border: 1px solid #292929;
+    width: 50%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .banner-presentation .info-picture .info-image {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 75% 75%;
+       object-position: 75% 75%;
+  }
+  .banner-presentation .info-text {
+    padding: 0 5% 40px 5%;
+    border: 1px solid #292929;
+    width: 50%;
+    background-color: #FFF;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .banner-presentation .info-text .subtitles3 {
+    font-size: 42px;
+    padding: 50px 0 1px 0;
+    margin: 0px;
+    line-height: 1.5;
+  }
+  .banner-presentation .info-text .title3 {
+    padding: 0 0 20px 0;
+    font-size: 46px;
+    line-height: 1.5;
+    font-weight: 600;
+    margin: 0px;
+  }
+  .banner-presentation .info-text p {
+    line-height: 3;
+  }
+  .location {
+    padding-bottom: 70px;
+  }
+  .location .banner-hash2 {
+    bottom: 40px;
+    -webkit-transform: translateX(-20px) translateY(-5px);
+            transform: translateX(-20px) translateY(-5px);
+    width: 120%;
+  }
+  .location .map-image {
+    width: 100%;
+  }
+  .reservation {
+    padding: 30px 9% 30px 9%;
+  }
+  .reservation .order-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .reservation .order-section .reserv-image-container {
+    width: 70%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .reservation .order-section .reserv-image-container .reserv-image {
+    width: 100%;
+    min-height: 790px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 50%;
+       object-position: 50% 50%;
+  }
+  .reservation .order-section .reservation-form {
+    padding: 30px 5% 30px 5%;
+    background-color: #F5F5F5;
+    z-index: 42;
+    width: 45%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin-left: -15%;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .reservation .order-section .reservation-form .input {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 15px;
+    border: none;
+  }
+  .reservation .order-section .reservation-form .form-2-by-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .reservation .order-section .reservation-form .form-2-by-row .single-input {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 49%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 5px 0 15px 0;
+  }
+  .reservation .order-section .reservation-form .single-line {
+    width: 100%;
+    margin: 5px 0 15px 0;
+  }
+  .reservation .order-section .reservation-form select {
+    background-color: #FFF;
+  }
+  .reservation .order-section .reservation-form textarea {
+    resize: none;
+    width: 100%;
+    border: none;
+    margin: 5px 0 15px 0;
+  }
+  .reservation .order-section .reservation-form .submit-btn {
+    border: none;
+    background-color: #292929;
+    color: #FFF;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 15px 30px 15px 30px;
+    margin: 15px auto 15px auto;
   }
 }
 /*# sourceMappingURL=style.css.map */
