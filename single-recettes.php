@@ -45,7 +45,13 @@
 	</div>
 
 	<figure class='illustration'>
-		<img src='<?php the_field('main_image'); ?>' class='illustration__image'/>
+		<?php $main_image = get_field('main_image'); ?>
+
+		<img src='<?php echo $main_image['url']; ?>' title='<?php echo the_field('title'); ?>' class='illustration__image'/>
+		
+		<figcaption class='illustration__caption'>
+			<?php echo $main_image['caption']; ?>
+		</figcaption>
 	</figure>
 
 	<section class='ingredients'>
@@ -64,27 +70,28 @@
 		</h2>
 
 		<div class='instructions__content'>
-			<?php $instructions = get_field('instructions'); ?>
+			<?php
+				if (have_rows('instructions')):
+					
+					while (have_rows('instructions')) : the_row();
+						$step = get_sub_field('step');
+						$sub_image = get_sub_field('sec_image');
+						the_content($step);
+						echo $step;
 
-			<ol class='instructions__list'>
-				<?php
-					foreach ($instructions as $instruction)
-					{
-						echo
-							'<li class=\'instructions__item\'>' . $instruction['step'] . '</li>'
-						;
-
-						if (!empty($instruction['sec_image']))
-						{
+						if ($sub_image):
 							echo
 								'<figure class=\'instructions__image-box\'>
-									<img src=\''.$instruction['sec_image'].'\' class=\'instructions__image\' />
+									<img src=\'' . $sub_image['url'] . '\' title=\'' . $sub_image['title'] . '\' class=\'instructions__image\' />
+									<figcaption class=\'instructions__caption\'>'
+										. $sub_image['caption'] .
+									'</figcaption>
 								</figure>'
 							;
-						}
-					}
-				?>
-			</ol>
+						endif;
+					endwhile;
+				endif;
+			?>
 		</div>
 	</section>
 
@@ -101,6 +108,9 @@
 		<div class='social-networks__mail'>
 			<a href='' class='social-networks__link'><img src='<?php bloginfo('url'); ?>/wp-content/themes/BananaPizza/assets/svg/mail-2.svg' alt='Mail' /></a>
 		</div>
+	</div>
+
+	<div class='clear'>
 	</div>
 </main>
 
