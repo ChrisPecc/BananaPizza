@@ -5,10 +5,275 @@ body {
   color: #292929;
 }
 
-body .intro {
+body main {
+  margin-bottom: 100px;
+}
+
+body main .intro {
   background-color: #292929;
   color: white;
-  width: 70%;
-  padding: 0 15% 30px 15%;
+  padding: 0 0 200px 0;
+}
+
+body main .intro .intro__margins {
+  width: 60%;
+  margin: 0 auto 0 auto;
+}
+
+body main .intro .intro__margins .intro__little-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 100px;
+}
+
+body main .intro .intro__margins .intro__little-menu .intro__back {
+  display: inline-block;
+  padding: 0 20px 0 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-right-color: white;
+}
+
+body main .intro .intro__margins .intro__little-menu .intro__back .intro__link::before {
+  content: '\2190';
+}
+
+body main .intro .intro__margins .intro__little-menu .intro__back .intro__link {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+body main .intro .intro__margins .intro__little-menu .intro__infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 0 0 0 20px;
+  font-weight: 500;
+}
+
+body main .intro .intro__margins .intro__little-menu .intro__infos .intro__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body main .intro .intro__margins .intro__little-menu .intro__infos .intro__list .intro__date {
+  -ms-grid-column-align: start;
+      justify-self: start;
+}
+
+body main .intro .intro__margins .intro__little-menu .intro__infos .intro__list .intro__category {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+body main .intro .intro__margins .intro__little-menu .intro__infos .intro__list .intro__category .intro__image {
+  display: inline-block;
+  width: 1rem;
+  margin: 0;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+body main .intro .intro__margins .intro__main-title {
+  margin: 0 0 50px 0;
+}
+
+body main .intro .intro__margins .intro__short-description {
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+body main .illustration {
+  margin: -140px auto 0 auto;
+  width: 60%;
+}
+
+body main .illustration .illustration__image {
+  width: 100%;
+}
+
+body main .illustration .illustration__caption {
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+body main .ingredients {
+  float: right;
+  width: 50%;
+  margin: 0 20% 100px 0;
+}
+
+body main .ingredients .ingredients__title {
+  margin-top: 0;
+}
+
+body main .ingredients ul {
+  margin-left: 20px;
+  padding-left: 0;
+}
+
+body main .ingredients ul li {
+  padding-left: 40px;
+}
+
+body main .instructions {
+  float: right;
+  width: 50%;
+  margin: 0 20% 0 0;
+}
+
+body main .instructions .instructions__title {
+  margin: 0 0 20px 0;
+}
+
+body main .instructions .instructions__content ol {
+  list-style: none;
+  counter-reset: section 0;
+  margin: 0;
+  padding-left: 0;
+}
+
+body main .instructions .instructions__content ol li::before {
+  counter-increment: section;
+  content: counter(section);
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 25px;
+  text-align: center;
+  font-weight: 700;
+  color: white;
+  background-color: #292929;
+  margin: 0 10px 0 -35px;
+  vertical-align: top;
+}
+
+body main .instructions .instructions__content ol li {
+  margin: 0 0 20px 0;
+}
+
+body main .instructions .instructions__content ol li p:first-of-type {
+  display: inline-block;
+  padding: 0;
+  max-width: calc(100% - 35px);
+}
+
+body main .instructions .instructions__content ol li p:last-of-type {
+  margin: 0 0 40px inherit;
+}
+
+body main .instructions .instructions__content ol .instructions__image-box {
+  margin: 0 0 40px 0;
+  width: 100%;
+}
+
+body main .instructions .instructions__content ol .instructions__image-box .instructions__image {
+  width: 100%;
+}
+
+body main .instructions .instructions__content ol .instructions__image-box .instructions__caption {
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+body main .social-networks {
+  display: inline-block;
+  width: 40px;
+  margin: 0 0 0 20%;
+}
+
+body main .social-networks .social-networks__facebook {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #3B5998;
+  margin-bottom: 10px;
+}
+
+body main .social-networks .social-networks__facebook .social-networks__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .social-networks .social-networks__twitter {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #1DA1F2;
+  margin-bottom: 10px;
+}
+
+body main .social-networks .social-networks__twitter .social-networks__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .social-networks .social-networks__instagram {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #C24A84;
+  margin-bottom: 10px;
+}
+
+body main .social-networks .social-networks__instagram .social-networks__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .social-networks .social-networks__mail {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #000000;
+}
+
+body main .social-networks .social-networks__mail .social-networks__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .clear {
+  clear: right;
 }
 /*# sourceMappingURL=recipe-style-desktop.css.map */
