@@ -109,6 +109,93 @@
             <p>cou cou cou </p>
             <a href="#">coucou</a>
         </div>
+        <img class="discover-hachures" src="<?php bloginfo('template_url'); ?>/assets/images/hachures-blanches.png" alt="">
+    </div>
+    <div class="citation">
+        <div class="citation-text">
+            <p>"</p>
+            <p>bla bla blaaaaaaa bla</p>
+            <p>- un mec</p>
+        </div>
+        <div class="citation-img">
+            <img src="<?php bloginfo('template_url'); ?>/assets/images/resto1.jpg" alt="">
+        </div>
+        
+    </div>
+    <div class="recipes">
+        <img class="citation-hachures" src="<?php bloginfo('template_url'); ?>/assets/images/hachure-blanches-top.png" alt="">
+        <div class="recipes-title">
+            <h3>latest updated</h3>
+            <h3>recipes blog</h3>
+        </div>
+        <div class="recipes-posts">
+            <div class="recipes-post">
+                <div class="recipes-img-box">
+                <img src="<?php bloginfo('template_url'); ?>/assets/images/resto1.jpg" alt="">
+                </div>
+                <p>16 mars 2020</p>
+                <h4>Sunday Brunch</h4>
+                <p>the best part of going to the pancake places aside from eating the pancakes is that you get to watch tjem expertly</p>
+                <div class="receipes-link">
+                    <div class="link-empty">
+
+                    </div>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+            <div class="recipes-post">
+                <div class="recipes-img-box">
+                <img src="<?php bloginfo('template_url'); ?>/assets/images/resto1.jpg" alt="">
+                </div>
+                <p>16 mars 2020</p>
+                <h4>Sunday Brunch</h4>
+                <p>the best part of going to the pancake places aside from eating the pancakes is that you get to watch tjem expertly</p>
+                <div class="receipes-link">
+                    <div class="link-empty">
+
+                    </div>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+            <div class="recipes-post">
+                <div class="recipes-img-box">
+                <img src="<?php bloginfo('template_url'); ?>/assets/images/resto1.jpg" alt="">
+                </div>
+                <p>16 mars 2020</p>
+                <h4>Sunday Brunch</h4>
+                <p>the best part of going to the pancake places aside from eating the pancakes is that you get to watch tjem expertly</p>
+                <div class="receipes-link">
+                    <div class="link-empty">
+
+                    </div>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+            <div class="recipes-post">
+                <div class="recipes-img-box">
+                <img src="<?php bloginfo('template_url'); ?>/assets/images/resto1.jpg" alt="">
+                </div>
+                <p>16 mars 2020</p>
+                <h4>Sunday Brunch</h4>
+                <p>the best part of going to the pancake places aside from eating the pancakes is that you get to watch tjem expertly</p>
+                <div class="receipes-link">
+                    <div class="link-empty">
+
+                    </div>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="newsletter">
+        <img class="citation-hachures" src="<?php bloginfo('template_url'); ?>/assets/images/hachures-noires.png" alt="">
+        <div class="newsletter-text">
+            <h3>Join our newsletter</h3>
+        </div>
+        <div class="newsletter-input">
+            <input type="email" name="email" id="" placeholder='Your Email Adress'>
+            <input type="submit" value="SUBSCRIBE">
+        </div>
     </div>
 
     <?php get_footer(); ?>

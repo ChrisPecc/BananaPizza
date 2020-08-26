@@ -713,22 +713,9 @@ body {
 
 .discover-menu {
   background-color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.discover-menu .discover-title-mobile {
-  display: block;
-  text-align: center;
 }
 
 .discover-menu .discover-img {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -746,8 +733,88 @@ body {
   text-align: center;
 }
 
-.discover-menu .discover-title-tab .hide-tab {
-  display: none;
+.discover-hachures {
+  width: 100%;
+  min-height: 60px;
+  max-height: 150px;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+}
+
+.citation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #292929;
+}
+
+.citation .citation-img img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: -7px;
+}
+
+.citation-hachures {
+  width: 100%;
+  min-height: 60px;
+  max-height: 150px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.recipes {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+
+.recipes .recipes-title {
+  width: 100%;
+  text-align: center;
+}
+
+.recipes .recipes-posts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.recipes .recipes-posts .recipes-img-box {
+  width: 100%;
+}
+
+.recipes .recipes-posts .recipes-img-box img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: -7px;
+}
+
+.newsletter {
+  background-color: #292929;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.newsletter .newsletter-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
 }
 
 @media screen and (max-width: 699px) {
@@ -772,7 +839,7 @@ body {
     display: none;
   }
   .text-chef {
-    width: 100%;
+    width: 88%;
     padding-left: 6%;
     padding-right: 6%;
   }
@@ -783,6 +850,19 @@ body {
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .discover-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .discover-title-mobile {
+    display: block;
+    text-align: center;
   }
   .discover-img {
     width: 100%;
@@ -803,6 +883,53 @@ body {
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .hide-tab {
+    display: none;
+  }
+  .citation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .citation .citation-text {
+    width: 100%;
+    color: white;
+    text-align: center;
+  }
+  .newsletter {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transform: translateY(70%);
+            transform: translateY(70%);
+  }
+  .newsletter .newsletter-text {
+    width: 100%;
+  }
+  .newsletter .newsletter-text h3 {
+    width: 30%;
+  }
+  .newsletter .newsletter-input {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -865,6 +992,19 @@ body {
     -webkit-box-shadow: 12px 12px 49px -27px #bab6ba;
     box-shadow: 12px 12px 49px -27px #bab6ba;
   }
+  .discover-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .discover-title-mobile {
+    display: block;
+    text-align: center;
+  }
   .discover-img {
     width: 100%;
     display: -webkit-box;
@@ -887,6 +1027,63 @@ body {
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .hide-tab {
+    display: none;
+  }
+  .citation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .citation .citation-text {
+    width: 100%;
+    color: white;
+    text-align: center;
+  }
+  .recipes {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .recipes .recipes-title {
+    width: 100%;
+    text-align: center;
+  }
+  .recipes .recipes-post {
+    width: 48%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .newsletter {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-transform: translateY(60%);
+            transform: translateY(60%);
+  }
+  .newsletter .newsletter-text {
+    width: 50%;
+  }
+  .newsletter .newsletter-input {
+    width: 50%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
   }
 }
 
@@ -962,6 +1159,100 @@ body {
     height: 800px;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .discover-title-mobile {
+    display: none;
+  }
+  .discover-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .discover-img {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .discover-img .discover-img-box {
+    width: 45%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .discover-img .discover-img-box img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .discover-title-tab {
+    width: 50%;
+  }
+  .citation {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .citation .citation-text {
+    width: 50%;
+    color: white;
+    text-align: center;
+  }
+  .citation .citation-img {
+    width: 50%;
+  }
+  .recipes {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .recipes .recipes-title {
+    width: 100%;
+    text-align: center;
+  }
+  .recipes .recipes-post {
+    width: 22%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .newsletter {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  .newsletter .newsletter-text {
+    width: 50%;
+  }
+  .newsletter .newsletter-input {
+    width: 50%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 /*# sourceMappingURL=style.css.map */
