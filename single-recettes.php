@@ -12,11 +12,13 @@
 
 
 <main>
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+	
 	<div class='intro'>
 		<div class='intro__margins'>
 			<div class="intro__little-menu">
 				<div class='intro__back'>
-					<a href='<?php wp_redirect(''); ?>' class='intro__link'>Retour</a>
+					<a href='<?php site_url(); ?>' class='intro__link'>Retour</a>
 				</div>
 
 				<div class='intro__infos'>
@@ -35,7 +37,7 @@
 			</div>
 
 			<h1 class='intro__main-title'>
-				<?php the_field('title'); ?>
+				<?php the_title(); ?>
 			</h1>
 
 			<p class='intro__short-description'>
@@ -47,7 +49,7 @@
 	<figure class='illustration'>
 		<?php $main_image = get_field('main_image'); ?>
 
-		<img src='<?php echo $main_image['url']; ?>' title='<?php echo the_field('title'); ?>' class='illustration__image'/>
+		<img src='<?php echo $main_image['url']; ?>' title='<?php the_field('title'); ?>' class='illustration__image'/>
 		
 		<figcaption class='illustration__caption'>
 			<?php echo $main_image['caption']; ?>
@@ -70,28 +72,30 @@
 		</h2>
 
 		<div class='instructions__content'>
-			<?php
-				if (have_rows('instructions')):
-					
-					while (have_rows('instructions')) : the_row();
-						$step = get_sub_field('step');
-						$sub_image = get_sub_field('sec_image');
-						the_content($step);
-						echo $step;
-
-						if ($sub_image):
-							echo
-								'<figure class=\'instructions__image-box\'>
-									<img src=\'' . $sub_image['url'] . '\' title=\'' . $sub_image['title'] . '\' class=\'instructions__image\' />
-									<figcaption class=\'instructions__caption\'>'
-										. $sub_image['caption'] .
-									'</figcaption>
-								</figure>'
-							;
-						endif;
-					endwhile;
-				endif;
-			?>
+			<?php if (have_rows('instructions')): ?>
+				<ol class='instructions__list'>
+					<?php
+						while (have_rows('instructions')) : the_row();
+							$step = get_sub_field('step');
+							$sub_image = get_sub_field('sec_image');
+							the_field($step);
+							
+							echo '<li class=\'instructions__item\'>' . $step . '</li>';
+							
+							if ($sub_image):
+								echo
+									'<figure class=\'instructions__image-box\'>
+										<img src=\'' . $sub_image['url'] . '\' title=\'' . $sub_image['title'] . '\' class=\'instructions__image\' />
+										<figcaption class=\'instructions__caption\'>'
+											. $sub_image['caption'] .
+										'</figcaption>
+									</figure>'
+								;
+							endif;
+						endwhile;
+					?>
+				</ol>
+			<?php endif; ?>
 		</div>
 	</section>
 
@@ -112,6 +116,7 @@
 
 	<div class='clear'>
 	</div>
+	<?php endwhile; endif; ?>
 </main>
 
 
