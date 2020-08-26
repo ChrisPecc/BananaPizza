@@ -156,14 +156,13 @@ body
 
 			.instructions__content // <div>
 			{
-				ol
+				.instructions__list // <ol>
 				{
-					list-style: none;
 					counter-reset: section 0;
-					margin: 0;
-					padding-left: 0;
-				
-					li::before
+					list-style: none;
+					padding: 0;
+
+					.instructions__item::before // <li>
 					{
 						counter-increment: section;
 						content: counter(section);
@@ -180,43 +179,37 @@ body
 						vertical-align: top;
 					}
 
-					li
+					.instructions__item // <li>
 					{
 						margin: 0 0 20px 0;
 
-						p:first-of-type
+						& > p
 						{
 							display: inline-block;
-							// margin-left: 0;
-							padding: 0;
-							max-width: calc(100% - 35px);
-						}
-
-						p:last-of-type
-						{
-							margin: 0 0 40px inherit;
+							margin-top: 0;
 						}
 					}
+				}
 
-					.instructions__image-box // <figure>
+				.instructions__image-box // <figure>
+				{
+					margin: 0 0 40px 0;
+					width: 100%;
+
+					.instructions__image // <img>
 					{
-						margin: 0 0 40px 0;
 						width: 100%;
+					}
 
-						.instructions__image // <img>
-						{
-							width: 100%;
-						}
-
-						.instructions__caption // <figcaption>
-						{
-							margin-bottom: 20px;
-							text-align: right;
-						}
+					.instructions__caption // <figcaption>
+					{
+						margin-bottom: 20px;
+						text-align: right;
 					}
 				}
 			}
 		}
+
 
 		.social-networks // <section>
 		{

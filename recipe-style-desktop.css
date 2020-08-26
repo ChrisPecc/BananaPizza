@@ -137,14 +137,13 @@ body main .instructions .instructions__title {
   margin: 0 0 20px 0;
 }
 
-body main .instructions .instructions__content ol {
-  list-style: none;
+body main .instructions .instructions__content .instructions__list {
   counter-reset: section 0;
-  margin: 0;
-  padding-left: 0;
+  list-style: none;
+  padding: 0;
 }
 
-body main .instructions .instructions__content ol li::before {
+body main .instructions .instructions__content .instructions__list .instructions__item::before {
   counter-increment: section;
   content: counter(section);
   display: inline-block;
@@ -160,30 +159,25 @@ body main .instructions .instructions__content ol li::before {
   vertical-align: top;
 }
 
-body main .instructions .instructions__content ol li {
+body main .instructions .instructions__content .instructions__list .instructions__item {
   margin: 0 0 20px 0;
 }
 
-body main .instructions .instructions__content ol li p:first-of-type {
+body main .instructions .instructions__content .instructions__list .instructions__item > p {
   display: inline-block;
-  padding: 0;
-  max-width: calc(100% - 35px);
+  margin-top: 0;
 }
 
-body main .instructions .instructions__content ol li p:last-of-type {
-  margin: 0 0 40px inherit;
-}
-
-body main .instructions .instructions__content ol .instructions__image-box {
+body main .instructions .instructions__content .instructions__image-box {
   margin: 0 0 40px 0;
   width: 100%;
 }
 
-body main .instructions .instructions__content ol .instructions__image-box .instructions__image {
+body main .instructions .instructions__content .instructions__image-box .instructions__image {
   width: 100%;
 }
 
-body main .instructions .instructions__content ol .instructions__image-box .instructions__caption {
+body main .instructions .instructions__content .instructions__image-box .instructions__caption {
   margin-bottom: 20px;
   text-align: right;
 }
