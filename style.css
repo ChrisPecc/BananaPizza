@@ -711,6 +711,45 @@ body {
   text-align: center;
 }
 
+.discover-menu {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.discover-menu .discover-title-mobile {
+  display: block;
+  text-align: center;
+}
+
+.discover-menu .discover-img {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.discover-menu .discover-img .discover-img-box img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.discover-menu .discover-title-tab {
+  text-align: center;
+}
+
+.discover-menu .discover-title-tab .hide-tab {
+  display: none;
+}
+
 @media screen and (max-width: 699px) {
   .icon {
     width: 100%;
@@ -737,16 +776,34 @@ body {
     padding-left: 6%;
     padding-right: 6%;
   }
-}
-
-.img-box-chef {
-  width: 100%;
-}
-
-.img-box-chef img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  .img-box-chef {
+    width: 100%;
+  }
+  .img-box-chef img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .discover-img {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .discover-img .discover-img-box {
+    width: 80%;
+    margin-bottom: 10px;
+  }
+  .discover-img .discover-img-box img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 
 @media screen and (min-width: 700px) and (max-width: 1029px) {
@@ -775,33 +832,62 @@ body {
             flex-direction: column;
     text-align: center;
   }
-}
-
-.chef-info {
-  background-color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.chef-info .text-chef {
-  width: 80%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  background-color: white;
-  padding: 20px;
-  -webkit-box-shadow: 12px 12px 49px -27px #bab6ba;
-  box-shadow: 12px 12px 49px -27px #bab6ba;
+  .chef-info {
+    background-color: white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .chef-info .img-box-chef {
+    width: 100%;
+  }
+  .chef-info .img-box-chef img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .chef-info .text-chef {
+    width: 80%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    background-color: white;
+    padding: 20px;
+    -webkit-box-shadow: 12px 12px 49px -27px #bab6ba;
+    box-shadow: 12px 12px 49px -27px #bab6ba;
+  }
+  .discover-img {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .discover-img .discover-img-box {
+    width: 45%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .discover-img .discover-img-box img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 
 @media screen and (min-width: 1030px) {

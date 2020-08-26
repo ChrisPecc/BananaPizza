@@ -86,6 +86,34 @@ body {
   }
 }
 
+.discover-menu {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  .discover-title-mobile {
+    display: block;
+    text-align: center;
+  }
+  .discover-img {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: center;
+    .discover-img-box {
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  .discover-title-tab {
+    text-align: center;
+    .hide-tab {
+      display: none;
+    }
+  }
+}
+
 // VUE MOBILE*******************************************************************
 @media screen and (max-width: 699px) {
   .icon {
@@ -106,15 +134,30 @@ body {
     padding-left: 6%;
     padding-right: 6%;
   }
-}
-.img-box-chef {
-  width: 100%;
-
-  img {
+  .img-box-chef {
     width: 100%;
-    object-fit: cover;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .discover-img {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .discover-img-box {
+      width: 80%;
+      margin-bottom: 10px;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
   }
 }
+
 // VUE TABLETTE*******************************************************************
 @media screen and (min-width: 700px) and (max-width: 1029px) {
   .icon {
@@ -134,23 +177,50 @@ body {
       text-align: center;
     }
   }
-}
-.chef-info {
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  .text-chef {
-    width: 80%;
-    transform: translateY(-50%);
+  .chef-info {
     background-color: white;
-    padding: 20px;
-    -webkit-box-shadow: 12px 12px 49px -27px rgba(186, 182, 186, 1);
-    -moz-box-shadow: 12px 12px 49px -27px rgba(186, 182, 186, 1);
-    box-shadow: 12px 12px 49px -27px rgba(186, 182, 186, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .img-box-chef {
+      width: 100%;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    .text-chef {
+      width: 80%;
+      transform: translateY(-50%);
+      background-color: white;
+      padding: 20px;
+      -webkit-box-shadow: 12px 12px 49px -27px rgba(186, 182, 186, 1);
+      -moz-box-shadow: 12px 12px 49px -27px rgba(186, 182, 186, 1);
+      box-shadow: 12px 12px 49px -27px rgba(186, 182, 186, 1);
+    }
+  }
+  .discover-img {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .discover-img-box {
+      width: 45%;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-left: 10px;
+      margin-right: 10px;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
   }
 }
+
 // VUE DESKTOP*******************************************************************
 @media screen and (min-width: 1030px) {
   .icon {
