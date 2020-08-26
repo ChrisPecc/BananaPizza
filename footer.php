@@ -1,6 +1,7 @@
 <?php
 /*template Name: footer */
 ?>
+
 <footer>
     <img class="footer-hachures" src="<?php bloginfo('template_url'); ?>/assets/images/hachures-noires.png" alt="">
     <div class="footer-container">
@@ -121,6 +122,7 @@
     </div>
 
 </footer>
+
 <script>
     document.addEventListener("DOMContentLoaded", function(event) {
         const hamburger = document.querySelector(".hamburgerIcon");

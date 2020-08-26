@@ -221,7 +221,8 @@ header {
 
 footer {
   margin: 0;
-  margin-top: 100px;
+  -webkit-transform: translateY(15%);
+          transform: translateY(15%);
   background-color: #292929;
 }
 
@@ -609,9 +610,14 @@ footer {
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
+  background-color: #f5f5f5;
 }
 
 /* START NAV BAR */
+.back-color {
+  background-color: #f5f5f5;
+}
+
 .index-banner {
   background-size: cover;
   background-position: center;
@@ -764,7 +770,7 @@ body {
 }
 
 .recipes {
-  background-color: white;
+  background-color: #f5f5f5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -787,6 +793,10 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.recipes .recipes-posts .recipes-post {
+  background-color: white;
 }
 
 .recipes .recipes-posts .recipes-img-box {

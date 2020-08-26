@@ -2,6 +2,7 @@
 /*template Name: front page */
 ?>
     <?php get_header(); ?>
+    <div class="back-color">
     <div class="index-container" >
         <div class="index-banner" style="background-image:url(<?php echo get_field('banner_top_img'); ?>)">
             <div class="banner-titles">
@@ -50,8 +51,8 @@
         </div>
             
         </div> 
-    </div>
-    <div class="chef-info">
+        </div>
+        <div class="chef-info">
         <div class="img-box-chef">
             <img src="<?php bloginfo('template_url'); ?>/assets/images/the-chef.jpg" alt="">
         </div>
@@ -123,7 +124,7 @@
         
     </div>
     <div class="recipes">
-        <img class="citation-hachures" src="<?php bloginfo('template_url'); ?>/assets/images/hachure-blanches-top.png" alt="">
+        <img class="citation-hachures" src="<?php bloginfo('template_url'); ?>/assets/images/hachures-grises-top.png" alt="">
         <div class="recipes-title">
             <h3>latest updated</h3>
             <h3>recipes blog</h3>
@@ -196,6 +197,7 @@
             <input type="email" name="email" id="" placeholder='Your Email Adress'>
             <input type="submit" value="SUBSCRIBE">
         </div>
+    </div>
     </div>
 
     <?php get_footer(); ?>
