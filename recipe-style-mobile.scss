@@ -95,6 +95,12 @@ body
 		{
 			width: 100%;
 		}
+
+		.illustration__caption // <figcaption>
+		{
+			margin-bottom: 20px;
+			text-align: right;
+		}
 	}
 
 	.ingredients // <section>
@@ -191,6 +197,12 @@ body
 				.instructions__image // <img>
 				{
 					width: 100%;
+				}
+
+				.instructions__caption // <figcaption>
+				{
+					margin-bottom: 20px;
+					text-align: right;
 				}
 			}
 		}

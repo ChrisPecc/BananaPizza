@@ -98,6 +98,11 @@ body .illustration .illustration__image {
   width: 100%;
 }
 
+body .illustration .illustration__caption {
+  margin-bottom: 20px;
+  text-align: right;
+}
+
 body .ingredients {
   margin: 0 70px 100px 70px;
 }
@@ -164,6 +169,11 @@ body .instructions .instructions__content .instructions__list .instructions__ima
 
 body .instructions .instructions__content .instructions__list .instructions__image-box .instructions__image {
   width: 100%;
+}
+
+body .instructions .instructions__content .instructions__list .instructions__image-box .instructions__caption {
+  margin-bottom: 20px;
+  text-align: right;
 }
 
 body .social-networks {
