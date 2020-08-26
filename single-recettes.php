@@ -117,6 +117,39 @@
 	<div class='clear'>
 	</div>
 	<?php endwhile; endif; ?>
+
+	<section class='latest-updates'>
+		<h2 class='latest-updates__title'>
+			<span class='latest-updates__title-part-1'>Latest updated</span>
+			<span class='latest-updates__title-part-2'>RECIPES BLOG</span>
+		</h2>
+
+		<?php
+			$args = array('post_type' => array('recettes'));
+
+			query_posts($args);
+			
+			echo
+				'<div class=\'latest-updates__content\'>
+					<figure class=\'latest-updates__image-box\'>
+						<img src=\''.$main_image['url'].'\' class=\'latest-updates__image\' />
+					</figure>
+
+					<div>'
+						.the_field('date').
+					'</div>
+
+					<h3>'
+						.the_field('title').
+					'</h3>
+
+					<p>'
+						.the_field('short_description').
+					'</p>
+				</div>'
+			;
+		?>
+	</section>
 </main>
 
 
