@@ -5,26 +5,26 @@ body {
 
 
 @media only screen and (max-width: 420px){
-    main {
+    .restaurant-post-type {
         font-family: 'Poppins', sans-serif;
         font-size: 12px;
         font-weight: lighter;
-    }
+        
+        .subtitles2 {
+            text-align: center;
+            font-size: 26px !important;
+            padding: 0px;
+            font-weight: normal;
+        }
     
-    .subtitles2 {
-        text-align: center;
-        font-size: 26px;
-        padding: 0px;
-        font-weight: normal;
-    }
-
-    .title2 {
-        padding: 0px;
-        text-align: center;
-        font-size: 32px;
-        line-height: 1.15 em;
-        font-weight: bold;
-        text-transform: uppercase;
+        .title2 {
+            padding: 0px;
+            text-align: center;
+            font-size: 32px!important;
+            line-height: 1.15 em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
     }
 
     
@@ -155,11 +155,17 @@ body {
     
     .location {
         padding-bottom: 70px;
+        width: 100%;
+        overflow:hidden;
 
-        .banner-hash2 {
-            bottom: 40px;
-            transform: translateX(-20px) translateY(-5px);
-            width: 300%
+        .img-container {
+            width: 100%;
+            o
+            
+            .banner-hash2 {
+                transform: translateX(-20px) translateY(-5px);
+                width: 300%;
+            }
         }
 
         .map-image {
@@ -252,26 +258,26 @@ body {
 // TABLETTE 
 
 @media only screen and (min-width: 421px) and (max-width: 800px){
-    main {
+    .restaurant-post-type {
         font-family: 'Poppins', sans-serif;
         font-size: 16px;
         font-weight: lighter;
-    }
+        
+        .subtitles2 {
+            text-align: center;
+            font-size: 42px;
+            padding: 0px;
+            font-weight: normal;
+        }
     
-    .subtitles2 {
-        text-align: center;
-        font-size: 42px;
-        padding: 0px;
-        font-weight: normal;
-    }
-
-    .title2 {
-        padding: 0px;
-        text-align: center;
-        font-size: 46px;
-        line-height: 1.15 em;
-        font-weight: bold;
-        text-transform: uppercase;
+        .title2 {
+            padding: 0px;
+            text-align: center;
+            font-size: 46px;
+            line-height: 1.15 em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
     }
 
     
@@ -401,11 +407,16 @@ body {
 
     .location {
         padding-bottom: 70px;
+        overflow: hidden;
 
-        .banner-hash2 {
-            bottom: 40px;
-            transform: translateX(-20px) translateY(-5px);
-            width: 120%
+        .img-container {
+            width:100%;
+            
+            .banner-hash2 {
+                bottom: 40px;
+                transform: translateX(-20px) translateY(-5px);
+                width: 120%
+            }
         }
 
         .map-image {
@@ -520,32 +531,31 @@ body {
 }
 
 
-//bureau
+//desktop
 
 
 @media only screen and (min-width: 801px){
-    main {
+    .restaurant-post-type {
         font-family: 'Poppins', sans-serif;
         font-size: 16px;
         font-weight: lighter;
-    }
+        
+        .subtitles2 {
+            text-align: center;
+            font-size: 42px;
+            padding: 0px;
+            font-weight: normal;
+        }
     
-    .subtitles2 {
-        text-align: center;
-        font-size: 42px;
-        padding: 0px;
-        font-weight: normal;
+        .title2 {
+            padding: 0px;
+            text-align: center;
+            font-size: 46px;
+            line-height: 1.15 em;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
     }
-
-    .title2 {
-        padding: 0px;
-        text-align: center;
-        font-size: 46px;
-        line-height: 1.15 em;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-
     
 
     .banner-top {
@@ -699,11 +709,16 @@ body {
 
     .location {
         padding-bottom: 70px;
+        overflow: hidden;
 
-        .banner-hash2 {
-            bottom: 40px;
-            transform: translateX(-20px) translateY(-5px);
-            width: 120%
+        .img-container {
+            width: 100%;
+            
+            .banner-hash2 {
+                bottom: 40px;
+                transform: translateX(-20px) translateY(-5px);
+                width: 120%
+            }
         }
 
         .map-image {

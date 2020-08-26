@@ -128,21 +128,21 @@ body {
 }
 
 @media only screen and (max-width: 420px) {
-  main {
+  .restaurant-post-type {
     font-family: 'Poppins', sans-serif;
     font-size: 12px;
     font-weight: lighter;
   }
-  .subtitles2 {
+  .restaurant-post-type .subtitles2 {
     text-align: center;
-    font-size: 26px;
+    font-size: 26px !important;
     padding: 0px;
     font-weight: normal;
   }
-  .title2 {
+  .restaurant-post-type .title2 {
     padding: 0px;
     text-align: center;
-    font-size: 32px;
+    font-size: 32px !important;
     line-height: 1.15 em;
     font-weight: bold;
     text-transform: uppercase;
@@ -251,9 +251,14 @@ body {
   }
   .location {
     padding-bottom: 70px;
+    width: 100%;
+    overflow: hidden;
   }
-  .location .banner-hash2 {
-    bottom: 40px;
+  .location .img-container {
+    width: 100%;
+  }
+  .location .img-container o
+.banner-hash2 {
     -webkit-transform: translateX(-20px) translateY(-5px);
             transform: translateX(-20px) translateY(-5px);
     width: 300%;
@@ -319,18 +324,18 @@ body {
 }
 
 @media only screen and (min-width: 421px) and (max-width: 800px) {
-  main {
+  .restaurant-post-type {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: lighter;
   }
-  .subtitles2 {
+  .restaurant-post-type .subtitles2 {
     text-align: center;
     font-size: 42px;
     padding: 0px;
     font-weight: normal;
   }
-  .title2 {
+  .restaurant-post-type .title2 {
     padding: 0px;
     text-align: center;
     font-size: 46px;
@@ -440,8 +445,12 @@ body {
   }
   .location {
     padding-bottom: 70px;
+    overflow: hidden;
   }
-  .location .banner-hash2 {
+  .location .img-container {
+    width: 100%;
+  }
+  .location .img-container .banner-hash2 {
     bottom: 40px;
     -webkit-transform: translateX(-20px) translateY(-5px);
             transform: translateX(-20px) translateY(-5px);
@@ -540,18 +549,18 @@ body {
 }
 
 @media only screen and (min-width: 801px) {
-  main {
+  .restaurant-post-type {
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: lighter;
   }
-  .subtitles2 {
+  .restaurant-post-type .subtitles2 {
     text-align: center;
     font-size: 42px;
     padding: 0px;
     font-weight: normal;
   }
-  .title2 {
+  .restaurant-post-type .title2 {
     padding: 0px;
     text-align: center;
     font-size: 46px;
@@ -699,8 +708,12 @@ body {
   }
   .location {
     padding-bottom: 70px;
+    overflow: hidden;
   }
-  .location .banner-hash2 {
+  .location .img-container {
+    width: 100%;
+  }
+  .location .img-container .banner-hash2 {
     bottom: 40px;
     -webkit-transform: translateX(-20px) translateY(-5px);
             transform: translateX(-20px) translateY(-5px);
@@ -861,6 +874,379 @@ body {
   }
   .ourmenu .ourmenu-container .menu-text-container .submit-btn::active {
     color: #FFF;
+  }
+}
+
+.menu-page {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+.menu-subsection .category-title {
+  text-transform: uppercase;
+  font-weight: 500;
+  text-align: center;
+}
+
+.menu-subsection .category-title .menu-category {
+  padding: 0 15px 5px 15px;
+  border-bottom: 3px solid black;
+}
+
+.menu-subsection .dishes-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 50px;
+}
+
+.menu-subsection .dishes-list .single-dish {
+  margin-bottom: 5px;
+}
+
+.menu-subsection .dishes-list .single-dish .firstline {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: baseline;
+      -ms-flex-pack: baseline;
+          justify-content: baseline;
+}
+
+.menu-subsection .dishes-list .single-dish .firstline .dish-name {
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.menu-subsection .dishes-list .single-dish .firstline .dots {
+  overflow: hidden;
+}
+
+.menu-subsection .dishes-list .single-dish .firstline .dish-price {
+  font-weight: bold;
+}
+
+.menu-subsection .dishes-list .single-dish .description {
+  color: #4d4d4d;
+}
+
+.menu-subsection .dishes-list .chef-tab {
+  background-color: gold;
+  color: #FFF;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.menu-subsection .dishes-list .chef-selection {
+  border: 2px solid gold;
+}
+
+@media only screen and (max-width: 420px) {
+  .menu-page .subtitles2 {
+    font-size: 26px;
+    text-align: center;
+  }
+  .menu-page .title2 {
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+  }
+  .chef-tab {
+    padding: 3px 5px 3px 5px;
+    font-size: 10px;
+  }
+  .category-title {
+    font-size: 30px;
+  }
+  .single-dish {
+    padding: 5px;
+  }
+  .single-dish .firstline {
+    font-size: 16px;
+  }
+  .chef-selection {
+    padding: 3px;
+  }
+  .description {
+    font-size: 14px;
+  }
+  .menu-subsection {
+    padding: 0 9% 0 9%;
+  }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 800px) {
+  .menu-subsection {
+    padding: 0 12% 0 12%;
+  }
+  .menu-page .subtitles2 {
+    font-size: 42px;
+    text-align: center;
+  }
+  .menu-page .title2 {
+    font-size: 46px;
+    font-weight: 600;
+    text-align: center;
+  }
+  .chef-tab {
+    padding: 4px 8px 4px 8px;
+    font-size: 12px;
+  }
+  .category-title {
+    font-size: 36px;
+  }
+  .single-dish {
+    padding: 10px;
+  }
+  .single-dish .firstline {
+    font-size: 18px;
+  }
+  .chef-selection {
+    padding: 8px;
+  }
+  .description {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 801px) {
+  .menu-subsection {
+    max-width: 800px;
+    padding: 0 30px 0 30px;
+    margin: 0 auto 0 auto;
+  }
+  .menu-page .subtitles2 {
+    font-size: 42px;
+    text-align: center;
+  }
+  .menu-page .title2 {
+    font-size: 46px;
+    font-weight: 600;
+    text-align: center;
+  }
+  .chef-tab {
+    padding: 4px 8px 4px 8px;
+    font-size: 12px;
+  }
+  .category-title {
+    font-size: 36px;
+  }
+  .single-dish {
+    padding: 10px;
+  }
+  .single-dish .firstline {
+    font-size: 18px;
+  }
+  .chef-selection {
+    padding: 8px;
+  }
+  .description {
+    font-size: 16px;
+  }
+}
+
+.archive-recipes-page {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: lighter;
+}
+
+@media only screen and (max-width: 420px) {
+  .archive-recipes-page {
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: lighter;
+  }
+  .archive-recipes-page .subtitles2 {
+    text-align: center;
+    font-size: 26px !important;
+    padding: 0px;
+    font-weight: normal;
+  }
+  .archive-recipes-page .title2 {
+    padding: 0px;
+    text-align: center;
+    font-size: 32px !important;
+    line-height: 1.15 em;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .recipes-list {
+    background-color: #F5F5F5;
+    margin: 0;
+    padding: 30px 0 30px 0;
+  }
+  .recipes-list .info-container-mobile {
+    background-color: #FFF;
+    margin: 60px 0 90px 0;
+  }
+  .recipes-list .info-container-mobile .post-image {
+    width: 100%;
+  }
+  .recipes-list .info-container-mobile .post-text {
+    padding: 0 9% 40px 9%;
+  }
+  .recipes-list .info-container-mobile .post-text p {
+    line-height: 250%;
+  }
+  .recipes-list .info-container-mobile .post-text .category {
+    text-align: center;
+    font-size: 22px;
+    padding: 50px 0 30px 0;
+    margin: 0px;
+    line-height: 1.15em;
+  }
+  .recipes-list .info-container-mobile .post-text .title3 {
+    padding: 10px 0 20px 0;
+    text-align: center;
+    font-size: 32px;
+    line-height: 1.15 em;
+    font-weight: 600;
+    margin: 0px;
+  }
+}
+
+@media only screen and (min-width: 421px) and (max-width: 800px) {
+  .archive-recipes-page {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: lighter;
+  }
+  .archive-recipes-page .subtitles2 {
+    text-align: center;
+    font-size: 42px;
+    padding: 0px;
+    font-weight: normal;
+  }
+  .archive-recipes-page .title2 {
+    padding: 0px;
+    text-align: center;
+    font-size: 46px;
+    line-height: 1.15 em;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .recipes-list {
+    background-color: #F5F5F5;
+    margin: 0;
+    padding: 30px 9% 30px 9%;
+  }
+  .recipes-list .info-container-mobile {
+    background-color: #FFF;
+    margin: 60px 0 90px 0;
+  }
+  .recipes-list .info-container-mobile .post-image {
+    width: 100%;
+  }
+  .recipes-list .info-container-mobile .post-text {
+    padding: 0 9% 40px 9%;
+  }
+  .recipes-list .info-container-mobile .post-text .category {
+    font-size: 24px;
+    padding: 50px 0 1px 0;
+    margin: 0px;
+  }
+  .recipes-list .info-container-mobile .post-text .title3 {
+    padding: 0 0 20px 0;
+    font-size: 32px;
+    line-height: 1.15 em;
+    font-weight: 600;
+    margin: 0px;
+  }
+  .recipes-list .info-container-mobile .post-text p {
+    line-height: 3;
+  }
+}
+
+@media only screen and (min-width: 801px) {
+  .archive-recipes-page {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: lighter;
+  }
+  .archive-recipes-page .subtitles2 {
+    text-align: center;
+    font-size: 42px;
+    padding: 0px;
+    font-weight: normal;
+  }
+  .archive-recipes-page .title2 {
+    padding: 0px;
+    text-align: center;
+    font-size: 46px;
+    line-height: 1.15 em;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .recipes-list {
+    background-color: #F5F5F5;
+    margin: 0;
+    padding: 30px 0 30px 0;
+  }
+  .recipes-list .info-container1 {
+    margin: 60px 0 90px 0;
+    padding: 0 9% 0 9%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .recipes-list .info-container2 {
+    margin: 60px 0 90px 0;
+    padding: 0 9% 0 9%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .recipes-list .post-picture {
+    border: 1px solid #292929;
+    width: 50%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .recipes-list .post-picture .post-image {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 75% 75%;
+       object-position: 75% 75%;
+  }
+  .recipes-list .post-text {
+    padding: 0 5% 40px 5%;
+    border: 1px solid #292929;
+    width: 50%;
+    background-color: #FFF;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .recipes-list .post-text .category {
+    font-size: 42px;
+    padding: 50px 0 1px 0;
+    margin: 0px;
+    line-height: 1.5;
+  }
+  .recipes-list .post-text .title3 {
+    padding: 0 0 20px 0;
+    font-size: 46px;
+    line-height: 1.5;
+    font-weight: 600;
+    margin: 0px;
+  }
+  .recipes-list .post-text p {
+    line-height: 2;
   }
 }
 /*# sourceMappingURL=style.css.map */

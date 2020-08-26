@@ -3,13 +3,10 @@
 * Template Name: Restaurant
 * Template Post Type: post, restaurant
 */
-?>
 
-<body>
-    <?php
     get_header();
     ?>
-    <main>
+    <main class="restaurant-post-type">
         <section class="banner-top">
             <div class="img-container">
                 <img class="banner-image" src="<?php echo get_field('img_BTop'); ?>">
@@ -33,7 +30,7 @@
                         <div class="info-picture">
                             <img class="info-image" src="<?php echo get_sub_field('image_repeater_BPres'); ?>">
                         </div>
-                        <div class=info-text>
+                        <div class="info-text">
                             <p class="subtitles3"><?php echo get_sub_field('subtitle_repeater_BPres') ?></p>
                             <h3 class="title3"><?php echo get_sub_field('title_repeater_BPres') ?></h3>
                             
@@ -53,7 +50,9 @@
         </section>
         
         <section class="location">
-            <img class="banner-hash2" src="<?php bloginfo('template_url'); ?>/assets/images/hachures-grises.png">
+            <div class="img-container">
+                <img class="banner-hash2" src="<?php bloginfo('template_url'); ?>/assets/images/hachures-grises.png">
+            </div>
             <p class="subtitles2"><?php the_field('subtitle_loc') ?></p>
             <h2 class="title2"><?php the_field('title_loc') ?></h2>
             <img class="map-image" src="<?php echo get_field('map_loc'); ?>">
@@ -67,7 +66,9 @@
                     <img class="reserv-image" src="<?php echo get_field('image_reserv'); ?>">
                 </div>
                 <div class="reservation-form">
-                    <form action="#" method="post">
+                    <form method="post">
+                        <?php wp_nonce_field('order_table_nonce'); ?>
+
                         <div class="form-2-by-row">
                             <div class="single-input">
                                 <label for="name">Your Name</label>
@@ -105,7 +106,7 @@
                                 <input class="input" type="time" name="time">
                             </div>
                             <div class="single-input">
-                                <label for="email">Select Date</label>
+                                <label for="date">Select Date</label>
                                 <input class="input" type="date" name="date">
                             </div>
                         </div>
@@ -116,7 +117,7 @@
                         </div>
 
                         <div class="single-input submit-input">
-                            <input class="submit-btn" type="submit" value="Reserve Now">
+                            <input class="submit-btn" name="table-reserv" type="submit" value="Reserve Now">
                         </div>
                     </form>
                 </div>
@@ -163,4 +164,3 @@
     <?php
     get_footer();
     ?>
-</body>
