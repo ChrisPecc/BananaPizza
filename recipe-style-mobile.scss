@@ -260,4 +260,47 @@ body
 			background-color: #000000;
 		}
 	}
+
+	.latest-updates // <section>
+	{
+		background-color: #F5F5F5;
+		padding-top: 50px;
+
+		.latest-updates__title // <h2>
+		{
+			margin: 0 20px 50px 20px;
+			text-align: center;
+
+			.latest-updates__title-part-1 // <span>
+			{
+				display: block;
+				margin-bottom: 30px;
+				font-size: 1.5rem;
+				font-weight: 400;
+			}
+
+			.latest-updates__title-part-2 // <span>
+			{
+				display: block;
+				font-size: 2.1rem;
+				font-weight: 600;
+			}
+		}
+
+		.latest-updates__content // <div>
+		{
+			background-color: rgb(255, 255, 255);
+
+			.latest-updates__image-box // <figure>
+			{
+				margin: 0;
+				width: 100%;
+
+				.latest-updates__image // <img>
+				{
+					width: 100%;
+				}
+			}
+		}
+	}
 }

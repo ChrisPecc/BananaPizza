@@ -267,4 +267,40 @@ body .social-networks .social-networks__mail .social-networks__link {
       -ms-flex-pack: center;
           justify-content: center;
 }
+
+body .latest-updates {
+  background-color: #F5F5F5;
+  padding-top: 50px;
+}
+
+body .latest-updates .latest-updates__title {
+  margin: 0 20px 50px 20px;
+  text-align: center;
+}
+
+body .latest-updates .latest-updates__title .latest-updates__title-part-1 {
+  display: block;
+  margin-bottom: 30px;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+body .latest-updates .latest-updates__title .latest-updates__title-part-2 {
+  display: block;
+  font-size: 2.1rem;
+  font-weight: 600;
+}
+
+body .latest-updates .latest-updates__content {
+  background-color: white;
+}
+
+body .latest-updates .latest-updates__content .latest-updates__image-box {
+  margin: 0;
+  width: 100%;
+}
+
+body .latest-updates .latest-updates__content .latest-updates__image-box .latest-updates__image {
+  width: 100%;
+}
 /*# sourceMappingURL=recipe-style-mobile.css.map */
