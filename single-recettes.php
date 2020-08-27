@@ -18,13 +18,13 @@
 		<div class='intro__margins'>
 			<div class="intro__little-menu">
 				<div class='intro__back'>
-					<a href='<?php site_url(); ?>' class='intro__link'>Retour</a>
+					<a href='<?php site_url(); ?>' class='intro__link'><img src='<?php bloginfo('url'); ?>/wp-content/themes/BananaPizza/assets/svg/keyboard_backspace.svg' class='intro__image' />Retour</a>
 				</div>
 
 				<div class='intro__infos'>
 					<ul class='intro__list'>
 						<li class='intro__date'>
-							<?php the_field('date'); ?>
+							<?php echo get_the_date(); ?>
 						</li>
 						<li class='intro__category'>
 							<figure class='intro__image'>
@@ -125,30 +125,49 @@
 		</h2>
 
 		<?php
-			$args = array('post_type' => array('recettes'));
+			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+			$args = array(
+				'post_type' => array('recettes'), 
+				'posts_per_page' => 4, 
+				'orderby' => 'date',
+				'order' => 'DESC',
+				'paged' => $paged,
+			);
 
-			query_posts($args);
-			
-			echo
-				'<div class=\'latest-updates__content\'>
-					<figure class=\'latest-updates__image-box\'>
-						<img src=\''.$main_image['url'].'\' class=\'latest-updates__image\' />
-					</figure>
+			$query = new WP_Query($args);
 
-					<div>'
-						.the_field('date').
-					'</div>
-
-					<h3>'
-						.the_field('title').
-					'</h3>
-
-					<p>'
-						.the_field('short_description').
-					'</p>
-				</div>'
-			;
+			if ($query -> have_posts()): 
+				while ($query -> have_posts()) : $query -> the_post();
+					$main_image = get_field('main_image');
+					$date = get_the_date('F j, Y');
 		?>
+					<div class='latest-updates__content'>
+						<figure class='latest-updates__image-box'>
+							<img src='<?php echo $main_image['url'] ?>' class='latest-updates__image' />
+						</figure>
+
+						<div class='latest-updates__date'>
+							<img src='<?php bloginfo('url'); ?>/wp-content/themes/BananaPizza/assets/svg/query_builder.svg' class='latest-updates__clock'/>
+							<?php echo $date; ?>
+						</div>
+
+						<h2 class='latest-updates__title'>
+							<?php the_field('title'); ?>
+						</h2>
+
+						<p class='latest-updates__short-description'>
+							<?php the_field('short_description'); ?>
+						</p>
+
+						<div class='latest-updates__read-more'>
+							<span class='latest-updates__dashes'>-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+							</span>
+							<a href='<?php the_permalink(); ?>' class='latest-updates__link'>READ MORE</a>
+						</div>
+					</div>
+				<?php endwhile;
+			endif;
+				?>
 	</section>
 </main>
 
