@@ -32,14 +32,17 @@ body .intro .intro__margins .intro__little-menu .intro__back {
   border-right-color: white;
 }
 
-body .intro .intro__margins .intro__little-menu .intro__back .intro__link::before {
-  content: '\2190';
-}
-
 body .intro .intro__margins .intro__little-menu .intro__back .intro__link {
   color: inherit;
   text-decoration: none;
   font-weight: 500;
+  white-space: nowrap;
+}
+
+body .intro .intro__margins .intro__little-menu .intro__back .intro__link .intro__image {
+  font-size: 1rem;
+  vertical-align: middle;
+  margin-right: 10px;
 }
 
 body .intro .intro__margins .intro__little-menu .intro__infos {
@@ -101,6 +104,7 @@ body .illustration .illustration__image {
 body .illustration .illustration__caption {
   margin-bottom: 20px;
   text-align: right;
+  font-size: 0.75rem;
 }
 
 body .ingredients {
@@ -117,7 +121,7 @@ body .ingredients ul li {
 }
 
 body .instructions .instructions__title {
-  margin: 0 70px 20px 70px;
+  margin: 0 70px 40px 70px;
 }
 
 body .instructions .instructions__content .instructions__list {
@@ -148,7 +152,7 @@ body .instructions .instructions__content .instructions__list .instructions__ite
 }
 
 body .instructions .instructions__content .instructions__list .instructions__item p {
-  margin: 0 0 20px 35px;
+  margin: 0 0 40px 35px;
 }
 
 body .instructions .instructions__content .instructions__list .instructions__item p:first-of-type {
@@ -163,7 +167,7 @@ body .instructions .instructions__content .instructions__list .instructions__ite
 }
 
 body .instructions .instructions__content .instructions__list .instructions__image-box {
-  margin: 0 0 40px 0;
+  margin: 0 0 50px 0;
   width: 100%;
 }
 
@@ -263,5 +267,97 @@ body .social-networks .social-networks__mail .social-networks__link {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+body .latest-updates {
+  background-color: #F5F5F5;
+  padding-top: 50px;
+}
+
+body .latest-updates .latest-updates__title {
+  margin: 0 20px 40px 20px;
+  text-align: center;
+}
+
+body .latest-updates .latest-updates__title .latest-updates__title-part-1 {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 2.6rem;
+  font-weight: 400;
+}
+
+body .latest-updates .latest-updates__title .latest-updates__title-part-2 {
+  display: block;
+  font-size: 2.6rem;
+  font-weight: 600;
+}
+
+body .latest-updates .latest-updates__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin: 0 40px 0 40px;
+  padding-bottom: 100px;
+  grid-gap: 20px;
+}
+
+body .latest-updates .latest-updates__content .latest-updates__recipe {
+  background-color: white;
+}
+
+body .latest-updates .latest-updates__content .latest-updates__recipe .latest-updates__image-box {
+  width: 100%;
+  height: 300px;
+  margin: 0 0 20px 0;
+}
+
+body .latest-updates .latest-updates__content .latest-updates__recipe .latest-updates__image-box .latest-updates__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body .latest-updates .latest-updates__content .latest-updates__recipe .latest-updates__date {
+  margin: 0 20px 20px 20px;
+  text-transform: uppercase;
+}
+
+body .latest-updates .latest-updates__content .latest-updates__recipe .latest-updates__date .latest-updates__clock {
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+body .latest-updates .latest-updates__content .latest-updates__recipe .latest-updates__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+body .latest-updates .latest-updates__content .latest-updates__recipe .latest-updates__short-description {
+  margin: 0 20px 20px 20px;
+}
+
+body .latest-updates .latest-updates__content .latest-updates__recipe .latest-updates__read-more {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-align: right;
+  margin: 0 20px 20px 20px;
+}
+
+body .latest-updates .latest-updates__content .latest-updates__recipe .latest-updates__read-more .latest-updates__dashes {
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+body .latest-updates .latest-updates__content .latest-updates__recipe .latest-updates__read-more .latest-updates__link {
+  font-weight: 500;
+  color: #292929;
+  text-decoration: none;
 }
 /*# sourceMappingURL=recipe-style-tablet.css.map */
