@@ -124,50 +124,53 @@
 			<span class='latest-updates__title-part-2'>RECIPES BLOG</span>
 		</h2>
 
-		<?php
-			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-			$args = array(
-				'post_type' => array('recettes'), 
-				'posts_per_page' => 4, 
-				'orderby' => 'date',
-				'order' => 'DESC',
-				'paged' => $paged,
-			);
+		<div class='latest-updates__content'>
+			<?php
+				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+				$args = array(
+					'post_type' => array('recettes'), 
+					'posts_per_page' => 4, 
+					'orderby' => 'date',
+					'order' => 'DESC',
+					'paged' => $paged,
+				);
 
-			$query = new WP_Query($args);
+				$query = new WP_Query($args);
 
-			if ($query -> have_posts()): 
-				while ($query -> have_posts()) : $query -> the_post();
-					$main_image = get_field('main_image');
-					$date = get_the_date('F j, Y');
-		?>
-					<div class='latest-updates__content'>
-						<figure class='latest-updates__image-box'>
-							<img src='<?php echo $main_image['url'] ?>' class='latest-updates__image' />
-						</figure>
+				if ($query -> have_posts()): 
+					while ($query -> have_posts()) : $query -> the_post();
+						$main_image = get_field('main_image');
+						$date = get_the_date('F j, Y');
+			?>
 
-						<div class='latest-updates__date'>
-							<img src='<?php bloginfo('url'); ?>/wp-content/themes/BananaPizza/assets/svg/query_builder.svg' class='latest-updates__clock'/>
-							<?php echo $date; ?>
+						<div class='latest-updates__recipe'>
+							<figure class='latest-updates__image-box'>
+								<img src='<?php echo $main_image['url'] ?>' class='latest-updates__image' />
+							</figure>
+
+							<div class='latest-updates__date'>
+								<img src='<?php bloginfo('url'); ?>/wp-content/themes/BananaPizza/assets/svg/query_builder.svg' class='latest-updates__clock'/>
+								<?php echo $date; ?>
+							</div>
+
+							<h2 class='latest-updates__title'>
+								<?php the_field('title'); ?>
+							</h2>
+
+							<p class='latest-updates__short-description'>
+								<?php the_field('short_description'); ?>
+							</p>
+
+							<div class='latest-updates__read-more'>
+								<span class='latest-updates__dashes'>-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+								</span>
+								<a href='<?php the_permalink(); ?>' class='latest-updates__link'>READ MORE</a>
+							</div>
 						</div>
-
-						<h2 class='latest-updates__title'>
-							<?php the_field('title'); ?>
-						</h2>
-
-						<p class='latest-updates__short-description'>
-							<?php the_field('short_description'); ?>
-						</p>
-
-						<div class='latest-updates__read-more'>
-							<span class='latest-updates__dashes'>-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-							</span>
-							<a href='<?php the_permalink(); ?>' class='latest-updates__link'>READ MORE</a>
-						</div>
-					</div>
-				<?php endwhile;
-			endif;
-				?>
+					<?php endwhile;
+				endif;
+					?>
+		</div>
 	</section>
 </main>
 
