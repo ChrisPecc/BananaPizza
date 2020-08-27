@@ -294,41 +294,45 @@ body .latest-updates .latest-updates__title .latest-updates__title-part-2 {
   font-weight: 600;
 }
 
-body .latest-updates .latest-updates__content {
+body .latest-updates .latest-updates__recipe {
   background-color: white;
   margin: 0 0 40px 0;
   padding: 0 0 20px 0;
 }
 
-body .latest-updates .latest-updates__content .latest-updates__image-box {
+body .latest-updates .latest-updates__recipe .latest-updates__image-box {
   margin: 0 0 20px 0;
   width: 100%;
+  height: 300px;
 }
 
-body .latest-updates .latest-updates__content .latest-updates__image-box .latest-updates__image {
+body .latest-updates .latest-updates__recipe .latest-updates__image-box .latest-updates__image {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
-body .latest-updates .latest-updates__content .latest-updates__date {
+body .latest-updates .latest-updates__recipe .latest-updates__date {
   margin: 0 20px 20px 20px;
   text-transform: uppercase;
 }
 
-body .latest-updates .latest-updates__content .latest-updates__date .latest-updates__clock {
+body .latest-updates .latest-updates__recipe .latest-updates__date .latest-updates__clock {
   font-size: 1rem;
   vertical-align: middle;
 }
 
-body .latest-updates .latest-updates__content .latest-updates__title {
+body .latest-updates .latest-updates__recipe .latest-updates__title {
   font-size: 1.25rem;
   font-weight: 600;
 }
 
-body .latest-updates .latest-updates__content .latest-updates__short-description {
+body .latest-updates .latest-updates__recipe .latest-updates__short-description {
   margin: 0 20px 20px 20px;
 }
 
-body .latest-updates .latest-updates__content .latest-updates__read-more {
+body .latest-updates .latest-updates__recipe .latest-updates__read-more {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -341,12 +345,12 @@ body .latest-updates .latest-updates__content .latest-updates__read-more {
   white-space: nowrap;
 }
 
-body .latest-updates .latest-updates__content .latest-updates__read-more .latest-updates__dashes {
+body .latest-updates .latest-updates__recipe .latest-updates__read-more .latest-updates__dashes {
   overflow: hidden;
   margin-right: 20px;
 }
 
-body .latest-updates .latest-updates__content .latest-updates__read-more .latest-updates__link {
+body .latest-updates .latest-updates__recipe .latest-updates__read-more .latest-updates__link {
   font-weight: 500;
   color: #292929;
   text-decoration: none;
