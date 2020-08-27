@@ -71,19 +71,33 @@
             <p>discover our franchise</p>
             <h2>Our restaurant</h2>
         </div>
+        <?php
+        $the_query_restaurant = new WP_Query(array(
+                        'post_type' => 'restaurant',
+                        'order'   => 'DESC',
+                    ));
+        ?>
+        <?php while ($the_query_restaurant->have_posts()): $the_query_restaurant->the_post();
+                $image = get_field('img_BTop');
+            ?>
         <div class="resto-info">
             <div class="img-box-resto">
                 <img src="<?php bloginfo('template_url'); ?>/assets/images/resto1.jpg" alt="">
             </div>
             <div class="resto-text">
-                <h2>bla bla bla</h2>
-                <p>bla bla bla bla</p>
-                <p>bla bla bla bla</p>
-                <p>bla bla bla bla</p>
+                <h2><?php echo get_field('main_title_BTop');?></h2>
+                <p><?php echo get_field('subtitle-BTop');?></p>
+                <?php while (have_rows('repeater_BPres')): the_row(); ?>
+                <p><?php echo get_sub_field('wysiwyg_repeater_BPres');?></p>
+                <?php endwhile; ?>
+                
             </div>
-        </div>
-        
+        </div>  
+        <?php endwhile; ?>
+
     </div>
+
+
     <div class="discover-menu">
         <div class="discover-title-mobile">
             <h2>coucouc</h2>
@@ -129,62 +143,34 @@
             <h3>latest updated</h3>
             <h3>recipes blog</h3>
         </div>
+        <?php
+        
+            $the_query = new WP_Query(array(
+                        'post_type' => 'recettes',
+                        'posts_per_page' => 4,
+                        'order'   => 'DESC',
+                    ));
+        ?>
         <div class="recipes-posts">
-            <div class="recipes-post">
-                <div class="recipes-img-box">
-                <img src="<?php bloginfo('template_url'); ?>/assets/images/resto1.jpg" alt="">
-                </div>
-                <p>16 mars 2020</p>
-                <h4>Sunday Brunch</h4>
-                <p>the best part of going to the pancake places aside from eating the pancakes is that you get to watch tjem expertly</p>
-                <div class="receipes-link">
-                    <div class="link-empty">
-
+            <?php while ($the_query->have_posts()): $the_query->the_post();
+                $image = get_field('main_image');
+            ?>
+                <div class="recipes-post">
+                    <div class="recipes-img-box">
+                        <img src="<?php echo $image['url']; ?>" alt="">
                     </div>
-                    <a href="#">Read more</a>
-                </div>
-            </div>
-            <div class="recipes-post">
-                <div class="recipes-img-box">
-                <img src="<?php bloginfo('template_url'); ?>/assets/images/resto1.jpg" alt="">
-                </div>
-                <p>16 mars 2020</p>
-                <h4>Sunday Brunch</h4>
-                <p>the best part of going to the pancake places aside from eating the pancakes is that you get to watch tjem expertly</p>
-                <div class="receipes-link">
-                    <div class="link-empty">
+                    <p><?php echo get_the_date(); ?></p>
+                    <h4><?php echo get_field('title');?></h4>
+                    <p><?php echo get_field('short_description');?></p>
+                    <div class="receipes-link">
+                        <div class="link-empty">
 
+                        </div>
+                        <a href="#">Read more</a>
                     </div>
-                    <a href="#">Read more</a>
                 </div>
-            </div>
-            <div class="recipes-post">
-                <div class="recipes-img-box">
-                <img src="<?php bloginfo('template_url'); ?>/assets/images/resto1.jpg" alt="">
-                </div>
-                <p>16 mars 2020</p>
-                <h4>Sunday Brunch</h4>
-                <p>the best part of going to the pancake places aside from eating the pancakes is that you get to watch tjem expertly</p>
-                <div class="receipes-link">
-                    <div class="link-empty">
-
-                    </div>
-                    <a href="#">Read more</a>
-                </div>
-            </div>
-            <div class="recipes-post">
-                <div class="recipes-img-box">
-                <img src="<?php bloginfo('template_url'); ?>/assets/images/resto1.jpg" alt="">
-                </div>
-                <p>16 mars 2020</p>
-                <h4>Sunday Brunch</h4>
-                <p>the best part of going to the pancake places aside from eating the pancakes is that you get to watch tjem expertly</p>
-                <div class="receipes-link">
-                    <div class="link-empty">
-
-                    </div>
-                    <a href="#">Read more</a>
-                </div>
+                
+            <?php endwhile; ?>
             </div>
         </div>
     </div>
