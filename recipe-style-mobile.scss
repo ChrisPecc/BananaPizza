@@ -21,18 +21,19 @@ body
 				{
 					margin: 0 0 50px 0;
 
-					.intro__link::before
-					{
-						content: '\2190';
-						font-size: 1.5rem;
-					}
-
 					.intro__link // <a>
 					{
 						color: inherit;
 						text-decoration: none;
 						font-size: 12px;
 						font-weight: 500;
+
+						.intro__image // <img>
+						{
+							font-size: 1rem;
+							vertical-align: middle;
+							margin-right: 10px;
+						}
 					}
 				}
 
@@ -100,6 +101,7 @@ body
 		{
 			margin-bottom: 20px;
 			text-align: right;
+			font-size: 0.75rem;
 		}
 	}
 
@@ -177,7 +179,7 @@ body
 					p:first-of-type
 					{
 						display: inline-block;
-						margin: 0;
+						margin: 0 0 40px 0;
 						max-width: calc(100% - 35px);
 					}
 
@@ -203,6 +205,7 @@ body
 				{
 					margin-bottom: 20px;
 					text-align: right;
+					font-size: 0.75rem;
 				}
 			}
 		}
@@ -290,15 +293,62 @@ body
 		.latest-updates__content // <div>
 		{
 			background-color: rgb(255, 255, 255);
+			margin: 0 0 40px 0;
+			padding: 0 0 20px 0;
 
 			.latest-updates__image-box // <figure>
 			{
-				margin: 0;
+				margin: 0 0 20px 0;
 				width: 100%;
 
 				.latest-updates__image // <img>
 				{
 					width: 100%;
+				}
+			}
+
+			.latest-updates__date // <div>
+			{
+				margin: 0 20px 20px 20px;
+				text-transform: uppercase;
+
+				.latest-updates__clock // <img>
+				{
+					font-size: 1rem;
+					vertical-align: middle;
+				}
+			}
+
+			.latest-updates__title // <h2>
+			{
+				font-size: 1.25rem;
+				font-weight: 600;
+			}
+
+			.latest-updates__short-description // <p>
+			{
+				margin: 0 20px 20px 20px;
+			}
+
+			.latest-updates__read-more // <div>
+			{
+				display: flex;
+				flex-direction: row;
+				text-align: right;
+				margin: 0 20px 0 20px;
+				white-space: nowrap;
+
+				.latest-updates__dashes // <span>
+				{
+					overflow: hidden;
+					margin-right: 20px;
+				}
+
+				.latest-updates__link // <a>
+				{
+					font-weight: 500;
+					color: #292929;
+					text-decoration: none;
 				}
 			}
 		}
