@@ -46,6 +46,10 @@
 		</div>
 	</div>
 
+	<div class='hachures'>
+		<img src='<?php bloginfo('url'); ?>/wp-content/themes/BananaPizza/assets/images/hachures-blanches.png' class='hachures__image' />
+	</div>
+
 	<figure class='illustration'>
 		<?php $main_image = get_field('main_image'); ?>
 
@@ -162,8 +166,7 @@
 							</p>
 
 							<div class='latest-updates__read-more'>
-								<span class='latest-updates__dashes'>-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-								</span>
+								<hr class='latest-updates__line'>
 								<a href='<?php the_permalink(); ?>' class='latest-updates__link'>READ MORE</a>
 							</div>
 						</div>
