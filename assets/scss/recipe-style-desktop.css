@@ -1,0 +1,370 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  color: #292929;
+}
+
+body main .intro {
+  background-color: #292929;
+  color: white;
+  padding: 0 0 200px 0;
+}
+
+body main .intro .intro__margins {
+  width: 60%;
+  margin: 0 auto 0 auto;
+}
+
+body main .intro .intro__margins .intro__little-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 100px;
+}
+
+body main .intro .intro__margins .intro__little-menu .intro__back {
+  display: inline-block;
+  padding: 0 20px 0 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-right-style: solid;
+  border-right-width: 1px;
+  border-right-color: white;
+}
+
+body main .intro .intro__margins .intro__little-menu .intro__back .intro__link {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+body main .intro .intro__margins .intro__little-menu .intro__back .intro__link .intro__image {
+  font-size: 1rem;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+body main .intro .intro__margins .intro__little-menu .intro__infos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 0 0 0 20px;
+  font-weight: 500;
+}
+
+body main .intro .intro__margins .intro__little-menu .intro__infos .intro__list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+body main .intro .intro__margins .intro__little-menu .intro__infos .intro__list .intro__date {
+  -ms-grid-column-align: start;
+      justify-self: start;
+}
+
+body main .intro .intro__margins .intro__little-menu .intro__infos .intro__list .intro__category {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+body main .intro .intro__margins .intro__little-menu .intro__infos .intro__list .intro__category .intro__image {
+  display: inline-block;
+  width: 1rem;
+  margin: 0;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+body main .intro .intro__margins .intro__main-title {
+  margin: 0 0 50px 0;
+}
+
+body main .intro .intro__margins .intro__short-description {
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+body main .hachures {
+  width: 100%;
+  -webkit-transform: rotate(0.5turn);
+          transform: rotate(0.5turn);
+  margin-top: -36.5px;
+}
+
+body main .hachures .hachures__image {
+  width: 100%;
+}
+
+body main .illustration {
+  margin: -140px auto 0 auto;
+  width: 60%;
+}
+
+body main .illustration .illustration__image {
+  width: 100%;
+}
+
+body main .illustration .illustration__caption {
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+body main .ingredients {
+  float: right;
+  width: 50%;
+  margin: 0 20% 100px 0;
+}
+
+body main .ingredients .ingredients__title {
+  margin-top: 0;
+}
+
+body main .ingredients ul {
+  margin-left: 20px;
+  padding-left: 0;
+}
+
+body main .ingredients ul li {
+  padding-left: 40px;
+}
+
+body main .instructions {
+  float: right;
+  width: 50%;
+  margin: 0 20% 0 0;
+}
+
+body main .instructions .instructions__title {
+  margin: 0 0 20px 0;
+}
+
+body main .instructions .instructions__content .instructions__list {
+  counter-reset: section 0;
+  list-style: none;
+  padding: 0;
+}
+
+body main .instructions .instructions__content .instructions__list .instructions__item::before {
+  counter-increment: section;
+  content: counter(section);
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 25px;
+  text-align: center;
+  font-weight: 700;
+  color: white;
+  background-color: #292929;
+  margin: 0 10px 0 -35px;
+  vertical-align: top;
+}
+
+body main .instructions .instructions__content .instructions__list .instructions__item {
+  margin: 0 0 20px 0;
+}
+
+body main .instructions .instructions__content .instructions__list .instructions__item > p {
+  display: inline-block;
+  margin-top: 0;
+}
+
+body main .instructions .instructions__content .instructions__image-box {
+  margin: 0 0 40px 0;
+  width: 100%;
+}
+
+body main .instructions .instructions__content .instructions__image-box .instructions__image {
+  width: 100%;
+}
+
+body main .instructions .instructions__content .instructions__image-box .instructions__caption {
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+body main .social-networks {
+  display: inline-block;
+  width: 40px;
+  margin: 0 0 0 20%;
+}
+
+body main .social-networks .social-networks__facebook {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #3B5998;
+  margin-bottom: 10px;
+}
+
+body main .social-networks .social-networks__facebook .social-networks__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .social-networks .social-networks__twitter {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #1DA1F2;
+  margin-bottom: 10px;
+}
+
+body main .social-networks .social-networks__twitter .social-networks__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .social-networks .social-networks__instagram {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #C24A84;
+  margin-bottom: 10px;
+}
+
+body main .social-networks .social-networks__instagram .social-networks__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .social-networks .social-networks__mail {
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #000000;
+}
+
+body main .social-networks .social-networks__mail .social-networks__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .clear {
+  clear: right;
+}
+
+body main .latest-updates {
+  background-color: #F5F5F5;
+  padding-top: 50px;
+}
+
+body main .latest-updates .latest-updates__title {
+  margin: 0 20px 40px 20px;
+  text-align: center;
+}
+
+body main .latest-updates .latest-updates__title .latest-updates__title-part-1 {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 2.6rem;
+  font-weight: 400;
+}
+
+body main .latest-updates .latest-updates__title .latest-updates__title-part-2 {
+  display: block;
+  font-size: 2.6rem;
+  font-weight: 600;
+}
+
+body main .latest-updates .latest-updates__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 80%;
+  margin: 0 auto 0 auto;
+  padding-bottom: 100px;
+  grid-gap: 20px;
+}
+
+body main .latest-updates .latest-updates__content .latest-updates__recipe {
+  background-color: white;
+}
+
+body main .latest-updates .latest-updates__content .latest-updates__recipe .latest-updates__image-box {
+  width: 100%;
+  height: 200px;
+  margin: 0 0 20px 0;
+}
+
+body main .latest-updates .latest-updates__content .latest-updates__recipe .latest-updates__image-box .latest-updates__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+body main .latest-updates .latest-updates__content .latest-updates__recipe .latest-updates__date {
+  margin: 0 20px 20px 20px;
+  text-transform: uppercase;
+}
+
+body main .latest-updates .latest-updates__content .latest-updates__recipe .latest-updates__date .latest-updates__clock {
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+body main .latest-updates .latest-updates__content .latest-updates__recipe .latest-updates__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+body main .latest-updates .latest-updates__content .latest-updates__recipe .latest-updates__short-description {
+  margin: 0 20px 20px 20px;
+}
+
+body main .latest-updates .latest-updates__content .latest-updates__recipe .latest-updates__read-more {
+  text-align: right;
+  margin: 0 20px 20px 20px;
+}
+
+body main .latest-updates .latest-updates__content .latest-updates__recipe .latest-updates__read-more .latest-updates__link {
+  font-weight: 500;
+  color: #292929;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+}
+
+body main .latest-updates .latest-updates__content .latest-updates__recipe .latest-updates__read-more .latest-updates__line {
+  word-wrap: none;
+}
+/*# sourceMappingURL=recipe-style-desktop.css.map */

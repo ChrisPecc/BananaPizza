@@ -1,0 +1,363 @@
+@media screen and (max-width: 320px)
+{
+	body
+{
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	color: #292929;
+
+	.intro // <div>
+	{
+		background-color: #292929;
+		color: rgb(255, 255, 255);
+		padding: 0 0 30px 0;
+
+		.intro__margins // <div>
+		{
+			margin: 0 20px 0 20px;
+
+			.intro__little-menu // <div>
+			{
+				.intro__back // <div>
+				{
+					margin: 0 0 50px 0;
+
+					.intro__link // <a>
+					{
+						color: inherit;
+						text-decoration: none;
+						font-size: 12px;
+						font-weight: 500;
+
+						.intro__image // <img>
+						{
+							font-size: 1rem;
+							vertical-align: middle;
+							margin-right: 10px;
+						}
+					}
+				}
+
+				.intro__infos // <div>
+				{
+					font-size: 16px;
+					font-weight: 500;
+					margin: 0 0 40px 0;
+
+					.intro__list // <ul>
+					{
+						display: flex;
+						width: 100%;
+						flex-direction: row;
+						justify-content: space-between;
+						list-style: none;
+						margin: 0;
+						padding: 0;
+
+						.intro__date // <li>
+						{
+							text-transform: uppercase;
+    					}
+
+                		.intro__category // <li>
+						{
+							.intro__image // <figure>
+							{
+								width: 1rem;
+								margin: 0;
+								display: inline-block;
+								filter: invert(100%);
+							}
+						}
+					}
+				}
+			}
+
+			.intro__main-title // <h1>
+			{
+				font-size: 40px;
+				font-weight: 600;
+				margin: 0 0 40px 0;
+			}
+
+			.intro__short-description // <p>
+			{
+				font-size: 16px;
+				font-weight: 500;
+			}
+		}
+	}
+
+	.illustration // <figure>
+	{
+		margin: 0 0 50px 0;
+		width: 100%;
+
+		.illustration__image // <img>
+		{
+			width: 100%;
+		}
+
+		.illustration__caption // <figcaption>
+		{
+			margin-bottom: 20px;
+			text-align: right;
+			font-size: 0.75rem;
+		}
+	}
+
+	.ingredients // <section>
+	{
+		margin: 0 0 30px 0;
+
+		.ingredients__title // <h2>
+		{
+			font-size: 25px;
+			font-weight: 600;
+			margin: 0 20px 30px 20px;
+		}
+
+		.ingredients__content // <div>
+		{
+			font-size: 12px;
+			font-weight: 400;
+			margin: 0 20px 0 20px;
+
+			ul
+			{
+				padding: 0;
+				list-style: inside;
+			}
+		}
+	}
+
+	.instructions // <section>
+	{
+		.instructions__title // <h2>
+		{
+			font-size: 25px;
+			font-weight: 600;
+			margin: 0 20px 30px 20px;
+		}
+
+		.instructions__content // <div>
+		{
+			font-size: 16px;
+			font-weight: 300;
+
+			.instructions__list // <ol>
+			{
+				padding: 0;
+				list-style-type: none;
+				counter-reset: section 0;
+
+				.instructions__item::before // <li>
+				{
+					counter-increment: section;
+					content: counter(section);
+					display: inline-block;
+					width: 25px;
+					height: 25px;
+					line-height: 25px;
+					border-radius: 25px;
+					text-align: center;
+					font-weight: 700;
+					color: rgb(255, 255, 255);
+					background-color: #292929;
+					margin: 0 10px 0 0;
+					vertical-align: top;
+				}
+
+				.instructions__item // <li>
+				{
+					margin: 0 20px 0 20px;
+					
+					p
+					{
+						margin: 0 0 20px 35px;
+					}
+
+					p:first-of-type
+					{
+						display: inline-block;
+						margin: 0 0 40px 0;
+						max-width: calc(100% - 35px);
+					}
+
+					p:last-of-type
+					{
+						display: inline-block;
+						margin: 0 0 50px inherit;
+					}
+				}
+			}
+
+			.instructions__image-box // <figure>
+			{
+				margin: 0 0 50px 0;
+				width: 100%;
+
+				.instructions__image // <img>
+				{
+					width: 100%;
+				}
+
+				.instructions__caption // <figcaption>
+				{
+					margin-bottom: 20px;
+					text-align: right;
+					font-size: 0.75rem;
+				}
+			}
+		}
+	}
+
+	.social-networks // <div>
+	{
+		display: flex;
+		justify-content: flex-end;
+		margin: 50px 0 150px 0;
+		padding: 0 20px 0 20px;
+
+		$margin-bottom-10px: 10px;
+
+		@mixin box-icon
+		{
+			width: 40px;
+			height: 40px;
+			border-radius: 40px;
+
+			.social-networks__link // <a>
+			{
+				display: flex;
+				width: inherit;
+				height: inherit;
+				border-radius: inherit;
+				justify-content: center;
+			}
+		}
+
+		.social-networks__facebook // <div>
+		{
+			@include box-icon;
+			background-color: #3B5998;
+			margin-right: $margin-bottom-10px;
+		}
+
+		.social-networks__twitter // <div>
+		{
+			@include box-icon;
+			background-color: #1DA1F2;
+			margin-right: $margin-bottom-10px;
+		}
+
+		.social-networks__instagram // <div>
+		{
+			@include box-icon;
+			background-color: #C24A84;
+			margin-right: $margin-bottom-10px;
+		}
+
+		.social-networks__mail // <div>
+		{
+			@include box-icon;
+			background-color: #000000;
+		}
+	}
+
+	.latest-updates // <section>
+	{
+		background-color: #F5F5F5;
+		padding-top: 50px;
+		
+
+		.latest-updates__title // <h2>
+		{
+			margin: 0 20px 50px 20px;
+			text-align: center;
+
+			.latest-updates__title-part-1 // <span>
+			{
+				display: block;
+				margin-bottom: 30px;
+				font-size: 1.5rem;
+				font-weight: 400;
+			}
+
+			.latest-updates__title-part-2 // <span>
+			{
+				display: block;
+				font-size: 2.1rem;
+				font-weight: 600;
+			}
+		}
+
+		.latest-updates__recipe // <div>
+		{
+			background-color: rgb(255, 255, 255);
+			margin: 0 0 40px 0;
+			padding: 0 0 20px 0;
+
+			.latest-updates__image-box // <figure>
+			{
+				margin: 0 0 20px 0;
+				width: 100%;
+				height: 300px;
+
+				.latest-updates__image // <img>
+				{
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+			}
+
+			.latest-updates__date // <div>
+			{
+				margin: 0 20px 20px 20px;
+				text-transform: uppercase;
+
+				.latest-updates__clock // <img>
+				{
+					font-size: 1rem;
+					vertical-align: middle;
+				}
+			}
+
+			.latest-updates__title // <h2>
+			{
+				font-size: 1.25rem;
+				font-weight: 600;
+			}
+
+			.latest-updates__short-description // <p>
+			{
+				margin: 0 20px 20px 20px;
+			}
+
+			.latest-updates__read-more // <div>
+			{
+				display: flex;
+				flex-direction: row;
+				text-align: right;
+				margin: 0 20px 0 20px;
+				white-space: nowrap;
+
+				.latest-updates__dashes // <span>
+				{
+					overflow: hidden;
+					margin-right: 20px;
+				}
+
+				.latest-updates__link // <a>
+				{
+					font-weight: 500;
+					color: #292929;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+}

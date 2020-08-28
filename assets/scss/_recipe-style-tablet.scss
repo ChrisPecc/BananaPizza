@@ -1,0 +1,363 @@
+@media screen and (min-width: 321px) and (max-width: 768px) and (orientation: portrait)
+{
+	body
+{
+	margin: 0;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 300;
+	color: #292929;
+	
+	.intro // <div>
+	{
+		background-color: #292929;
+		color: rgb(255, 255, 255);
+		padding: 0 0 30px 0;
+
+		.intro__margins // <div>
+		{
+			margin: 0 70px 0 70px;
+
+			.intro__little-menu // <div>
+			{
+				display: flex;
+				margin: 0 0 100px 0;
+
+				.intro__back // <div>
+				{
+					display: inline-block;
+					padding: 0 20px 0 0;
+					box-sizing: border-box;
+					border-right-style: solid;
+					border-right-width: 1px;
+					border-right-color: rgb(255, 255, 255);
+
+					.intro__link // <a>
+					{
+						color: inherit;
+						text-decoration: none;
+						font-weight: 500;
+						white-space: nowrap;
+
+						.intro__image // <img>
+						{
+							font-size: 1rem;
+							vertical-align: middle;
+							margin-right: 10px;
+						}
+					}
+				}
+
+				.intro__infos // <div>
+				{
+					display: flex;
+					width: 100%;
+					padding: 0 0 0 20px;
+					font-weight: 500;
+
+					.intro__list // <ul>
+					{
+						display: grid;
+						grid-template-columns: 1fr 1fr;
+						width: 100%;
+						list-style: none;
+						margin: 0;
+						padding: 0;
+
+						.intro__date // <li>
+						{
+							justify-self: start;
+						}
+
+						.intro__category // <li>
+						{
+							justify-self: end;
+
+							.intro__image // <figure>
+							{
+								display: inline-block;
+								width: 1rem;
+								margin: 0;
+								filter: invert(100%);
+							}
+						}
+					}
+				}
+			}
+
+			.intro__main-title // <h1>
+			{
+				margin: 0 0 50px 0;
+			}
+
+			.intro__short-description // <p>
+			{
+				font-weight: 500;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.illustration // <figure>
+	{
+		margin: 0 0 50px 0;
+		width: 100%;
+
+		.illustration__image // <img>
+		{
+			width: 100%;
+		}
+
+		.illustration__caption // <figcaption>
+		{
+			margin-bottom: 20px;
+			text-align: right;
+			font-size: 0.75rem;
+		}
+	}
+
+	.ingredients // <section>
+	{
+		margin: 0 70px 100px 70px;
+
+		ul
+		{
+			margin-left: 20px;
+			padding-left: 0;
+
+			li
+			{
+				padding-left: 40px;
+			}
+		}
+	}
+
+	.instructions // <section>
+	{
+		.instructions__title // <h2>
+		{
+			margin: 0 70px 40px 70px;
+		}
+
+		.instructions__content // <div>
+		{
+			.instructions__list // <ol>
+			{
+				list-style: none;
+				counter-reset: section 0;
+				margin: 0;
+				padding-left: 0;
+				
+				.instructions__item::before // <li>
+				{
+					counter-increment: section;
+					content: counter(section);
+					display: inline-block;
+					width: 25px;
+					height: 25px;
+					line-height: 25px;
+					border-radius: 25px;
+					text-align: center;
+					font-weight: 700;
+					color: rgb(255, 255, 255);
+					background-color: #292929;
+					margin: 0 10px 0 0;
+					vertical-align: top;
+				}
+
+				.instructions__item // <li>
+				{
+					margin: 0 70px 0 70px;
+
+					p
+					{
+						margin: 0 0 40px 35px;
+					}
+
+					p:first-of-type
+					{
+						display: inline-block;
+						margin-left: 0;
+						padding: 0;
+						max-width: calc(100% - 35px);
+					}
+
+					p:last-of-type
+					{
+						margin: 0 0 40px inherit;
+					}
+				}
+
+				.instructions__image-box // <figure>
+				{
+					margin: 0 0 50px 0;
+					width: 100%;
+
+					.instructions__image // <img>
+					{
+						width: 100%;
+					}
+
+					.instructions__caption // <figcaption>
+					{
+						margin-bottom: 20px;
+						text-align: right;
+					}
+				}
+			}
+		}
+	}
+
+	.social-networks // <section>
+	{
+		display: flex;
+		justify-content: flex-end;
+		margin: 50px 70px 150px 70px;
+
+		$margin-bottom-10px: 10px;
+
+		@mixin box-icon
+		{
+			width: 40px;
+			height: 40px;
+			border-radius: 40px;
+
+			.social-networks__link // <a>
+			{
+				display: flex;
+				width: inherit;
+				height: inherit;
+				border-radius: inherit;
+				justify-content: center;
+			}
+		}
+
+		.social-networks__facebook // <div>
+		{
+			@include box-icon;
+			background-color: #3B5998;
+			margin-right: $margin-bottom-10px;
+		}
+
+		.social-networks__twitter // <div>
+		{
+			@include box-icon;
+			background-color: #1DA1F2;
+			margin-right: $margin-bottom-10px;
+		}
+
+		.social-networks__instagram // <div>
+		{
+			@include box-icon;
+			background-color: #C24A84;
+			margin-right: $margin-bottom-10px;
+		}
+
+		.social-networks__mail // <div>
+		{
+			@include box-icon;
+			background-color: #000000;
+		}
+	}
+
+	.latest-updates // <section>
+	{
+		background-color: #F5F5F5;
+		padding-top: 50px;
+
+		.latest-updates__title // <h2>
+		{
+			
+			margin: 0 20px 40px 20px;
+			text-align: center;
+
+			.latest-updates__title-part-1 // <span>
+			{
+				display: block;
+				margin-bottom: 10px;
+				font-size: 2.6rem;
+				font-weight: 400;
+			}
+
+			.latest-updates__title-part-2 // <span>
+			{
+				display: block;
+				font-size: 2.6rem;
+				font-weight: 600;
+			}
+		}
+
+		.latest-updates__content // <div>
+		{
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			margin: 0 40px 0 40px;
+			padding-bottom: 100px;
+			grid-gap: 20px;
+
+			.latest-updates__recipe // <div>
+			{
+				background-color: rgb(255, 255, 255);
+
+				.latest-updates__image-box // <figure>
+				{
+					width: 100%;
+					height: 300px;
+					margin: 0 0 20px 0;
+
+					.latest-updates__image // <img>
+					{
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+
+				.latest-updates__date // <div>
+				{
+					margin: 0 20px 20px 20px;
+					text-transform: uppercase;
+
+					.latest-updates__clock // <img>
+					{
+						font-size: 1rem;
+						vertical-align: middle;
+					}
+				}
+
+				.latest-updates__title // <h2>
+				{
+					font-size: 1.25rem;
+					font-weight: 600;
+				}
+
+				.latest-updates__short-description // <p>
+				{
+					margin: 0 20px 20px 20px;
+				}
+
+				.latest-updates__read-more // <div>
+				{
+					display: flex;
+					flex-direction: row;
+					text-align: right;
+					margin: 0 20px 20px 20px;
+					// white-space: nowrap;
+
+					.latest-updates__dashes // <span>
+					{
+						overflow: hidden;
+						margin-right: 20px;
+					}
+
+					.latest-updates__link // <a>
+					{
+						font-weight: 500;
+						color: #292929;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+}
+}

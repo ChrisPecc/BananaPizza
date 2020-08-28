@@ -1,0 +1,34 @@
+{
+  "name": "",
+  "isOrdered": true,
+  "folders": {
+    "assets": {
+      "name": "assets",
+      "isOrdered": true,
+      "folders": {
+        "design": {
+          "name": "design",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "images": {
+          "name": "images",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        },
+        "svg": {
+          "name": "svg",
+          "isOrdered": true,
+          "folders": {},
+          "files": {}
+        }
+      },
+      "files": {}
+    }
+  },
+  "files": {
+    "README": 0
+  }
+}
