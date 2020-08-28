@@ -1,8 +1,8 @@
 <?php
-	/*
-		Template name: Single-recipe
-		Template Post Type: post
-	*/
+    /*
+        Template name: Single-recipe
+        Template Post Type: post
+    */
 ?>
 
 
@@ -30,7 +30,10 @@
 							<figure class='intro__image'>
 								<img src='<?php bloginfo('url'); ?>/wp-content/themes/BananaPizza/assets/svg/cutelry.svg' />
 							</figure>
-							<?php the_field('category'); ?>
+							<?php
+                            $category = get_field('category');
+                            var_dump($category);
+                            echo get_the_category() ->cat_name; ?>
 						</li>
 					</ul>
 				</div>
@@ -79,25 +82,25 @@
 			<?php if (have_rows('instructions')): ?>
 				<ol class='instructions__list'>
 					<?php
-						while (have_rows('instructions')) : the_row();
-							$step = get_sub_field('step');
-							$sub_image = get_sub_field('sec_image');
-							the_field($step);
-							
-							echo '<li class=\'instructions__item\'>' . $step . '</li>';
-							
-							if ($sub_image):
-								echo
-									'<figure class=\'instructions__image-box\'>
+                        while (have_rows('instructions')) : the_row();
+                            $step = get_sub_field('step');
+                            $sub_image = get_sub_field('sec_image');
+                            the_field($step);
+                            
+                            echo '<li class=\'instructions__item\'>' . $step . '</li>';
+                            
+                            if ($sub_image):
+                                echo
+                                    '<figure class=\'instructions__image-box\'>
 										<img src=\'' . $sub_image['url'] . '\' title=\'' . $sub_image['title'] . '\' class=\'instructions__image\' />
 										<figcaption class=\'instructions__caption\'>'
-											. $sub_image['caption'] .
-										'</figcaption>
+                                            . $sub_image['caption'] .
+                                        '</figcaption>
 									</figure>'
-								;
-							endif;
-						endwhile;
-					?>
+                                ;
+                            endif;
+                        endwhile;
+                    ?>
 				</ol>
 			<?php endif; ?>
 		</div>
@@ -130,22 +133,22 @@
 
 		<div class='latest-updates__content'>
 			<?php
-				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-				$args = array(
-					'post_type' => array('recettes'), 
-					'posts_per_page' => 4, 
-					'orderby' => 'date',
-					'order' => 'DESC',
-					'paged' => $paged,
-				);
+                $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+                $args = array(
+                    'post_type' => array('recettes'),
+                    'posts_per_page' => 4,
+                    'orderby' => 'date',
+                    'order' => 'DESC',
+                    'paged' => $paged,
+                );
 
-				$query = new WP_Query($args);
+                $query = new WP_Query($args);
 
-				if ($query -> have_posts()): 
-					while ($query -> have_posts()) : $query -> the_post();
-						$main_image = get_field('main_image');
-						$date = get_the_date('F j, Y');
-			?>
+                if ($query -> have_posts()):
+                    while ($query -> have_posts()) : $query -> the_post();
+                        $main_image = get_field('main_image');
+                        $date = get_the_date('F j, Y');
+            ?>
 
 						<div class='latest-updates__recipe'>
 							<figure class='latest-updates__image-box'>
@@ -171,8 +174,8 @@
 							</div>
 						</div>
 					<?php endwhile;
-				endif;
-					?>
+                endif;
+                    ?>
 		</div>
 	</section>
 </main>

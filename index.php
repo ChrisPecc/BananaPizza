@@ -13,7 +13,7 @@
                 <h1><?php echo get_field('banner_top_title');?></h1>
                 </div>
                 <div class="intern-link">
-                <a href="<?php echo get_field('menu_link');?>">Check our Menu</a>
+                <a href="<?php bloginfo('template_url'); ?>/page-menu/">Check our Menu</a>
                 </div>
             </div> 
         </div>
@@ -87,9 +87,11 @@
             <div class="resto-text">
                 <h2><?php echo get_field('main_title_BTop');?></h2>
                 <p><?php echo get_field('subtitle-BTop');?></p>
+                <?php if (have_rows('repeater_BPres')):?>
                 <?php while (have_rows('repeater_BPres')): the_row(); ?>
                 <p><?php echo get_sub_field('wysiwyg_repeater_BPres');?></p>
                 <?php endwhile; ?>
+                <?php endif;?>
                 <a href="<?php the_permalink(); ?>">More infos</a>
                 
             </div>

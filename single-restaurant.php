@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 
     get_header();
@@ -20,8 +20,8 @@
 
             <?php
             $count=1;
-            if( have_rows('repeater_BPres') ):
-                while(have_rows('repeater_BPres')): the_row();
+            if (have_rows('repeater_BPres')):
+                while (have_rows('repeater_BPres')): the_row();
                     ?>
                     <div class="info-container-mobile <?php if ($count%2==1):?>info-container1<?php else:?>info-container2 <?php endif;?>">
                         <div class="info-picture">
@@ -126,28 +126,28 @@
                 <div class="menu-img-container">
                     <div class="menu-grid">
                         <div class="menu-img">
-                            <img class="menu-image" src="<?php echo get_field('img1', 116); ?>">
+                            <img class="menu-image" src="<?php echo get_field('menu_photo1', 75); ?>">
                         </div>
         
                         <div class="menu-img">
-                            <img class="menu-image" src="<?php echo get_field('img2', 116); ?>">
+                            <img class="menu-image" src="<?php echo get_field('menu_photo2', 75); ?>">
                         </div>
         
                         <div class="menu-img">
-                            <img class="menu-image" src="<?php echo get_field('img3', 116); ?>">
+                            <img class="menu-image" src="<?php echo get_field('menu_photo3', 75); ?>">
                         </div>
         
                         <div class="menu-img">
-                            <img class="menu-image" src="<?php echo get_field('img4', 116); ?>">
+                            <img class="menu-image" src="<?php echo get_field('menu_photo4', 75); ?>">
                         </div>
                     </div>
                     
                 </div>
     
                 <div class="menu-text-container">
-                    <p class="subtitles2"><?php the_field('menu_subtitle', 116) ?></p>
-                    <h2 class="title2"><?php the_field('menu_title', 116) ?></h2>
-                    <p class="menu-text"><?php the_field('menu_text', 116) ?></p>
+                    <p class="subtitles2"><?php the_field('subtitle_menu', 75) ?></p>
+                    <h2 class="title2"><?php the_field('title_menu', 75) ?></h2>
+                    <p class="menu-text"><?php the_field('menu_text', 75) ?></p>
                     <a class="submit-btn" href="<?php the_field('menu_intern_link')?>">View the full menu</a>
 
     

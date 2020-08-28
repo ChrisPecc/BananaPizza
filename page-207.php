@@ -17,22 +17,22 @@
         <h2 class="title2"><?php the_field('title_menu') ?></h2>
         <div class="menu-itself">
             <?php
-            if( have_rows('repeater_section') ):
-                while(have_rows('repeater_section')): the_row();
+            if (have_rows('repeater_section')):
+                while (have_rows('repeater_section')): the_row();
                     ?>
                     <div class="menu-subsection">
                     <h3 class="category-title"><span class="menu-category"><?php the_sub_field('section_menu') ?></span></h3>
                         <div class="menu-item">
                             <?php
-                            if ( have_rows('repeater_items') ):
+                            if (have_rows('repeater_items')):
                                 ?>
                                 <ul class="dishes-list">
                                     <?php
-                                    while( have_rows('repeater_items') ): the_row();
+                                    while (have_rows('repeater_items')): the_row();
                                         if (get_sub_field('chef_selection')== 1):
                                             ?>
                                             <span class="chef-tab">Chef Selection</span>
-                                            <?php 
+                                            <?php
                                         endif;
                                         ?>
                                         <li class="single-dish <?php if (get_sub_field('chef_selection')== 1):?>chef-selection<?php endif; ?>">
