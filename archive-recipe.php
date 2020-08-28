@@ -116,7 +116,7 @@ get_header(); ?>
             endwhile;
         else:
             ?>
-        <p>Cette section est vide</p>
+        <p class="empty">This section is empty</p>
         <?php
         endif;
         wp_reset_postdata();
