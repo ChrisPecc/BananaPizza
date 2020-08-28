@@ -1082,6 +1082,7 @@ body {
 .archive-recipes-page .pagination {
   padding: 0 9% 0 9%;
   text-align: center;
+  line-height: 250%;
 }
 
 .archive-recipes-page .pagination a {
