@@ -77,26 +77,7 @@ get_header(); ?>
             }
             
         }
-
-        // if (!empty($_COOKIE['category'])){
-        //     $args = array(
-        //         'post_type'=>array('recettes'), 
-        //         'posts_per_page'=>5, 
-        //         'orderby' => 'date',
-        //         'order'   => 'DESC',
-        //         'paged' => $paged,
-        //         'tax_query' => array(
-        //             array(
-        //                 'taxonomy' => 'category',
-        //                 'field'    => 'name',
-        //                 'terms'    => $_COOKIE['category'],
-        //             ),
-        //         ),
-                
-        //     );
-        // }
-
-
+        
         else {
             $args = array(
                 'post_type'=>array('recettes'), 
@@ -125,8 +106,8 @@ get_header(); ?>
                         <p class="date"><?php echo get_the_date( 'd M Y' ); ?></p>
                         <span class="category"><?php echo $category['0'] ->cat_name; ?></span>
                         <h3 class="title3"><?php the_field('title'); ?></h3>
-                        <p class="shordesc"><?php the_field('short_description'); ?></p>
-                        <a href="<?php the_permalink(); ?>">Read More</a>
+                        <p class="shortdesc"><?php the_field('short_description'); ?></p>
+                        <a class="bt-link" href="<?php the_permalink(); ?>">Read More</a>
                     </div>
 
                 </div>

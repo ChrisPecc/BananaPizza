@@ -1059,6 +1059,44 @@ body {
 .archive-recipes-page .category-list {
   background-color: #F5F5F5;
   text-align: center;
+  padding: 0 9% 0 9%;
+}
+
+.archive-recipes-page .post-text {
+  text-align: center;
+}
+
+.archive-recipes-page .post-text .bt-link {
+  background-color: #292929;
+  color: #FFF;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.archive-recipes-page .post-text .bt-link:active {
+  color: #FFF;
+}
+
+.archive-recipes-page .pagination {
+  padding: 0 9% 0 9%;
+  text-align: center;
+}
+
+.archive-recipes-page .pagination a {
+  text-decoration: none;
+  border: 1px solid black;
+  padding: 3px 5px 3px 5px;
+  background-color: #FFF;
+}
+
+.archive-recipes-page .pagination .current {
+  text-decoration: none;
+  border: 1px solid black;
+  padding: 3px 5px 3px 5px;
+  color: #FFF;
+  background-color: #292929;
 }
 
 @media only screen and (max-width: 420px) {
@@ -1101,7 +1139,7 @@ body {
   }
   .recipes-list .info-container-mobile .post-text .category {
     text-align: center;
-    font-size: 22px;
+    font-size: 18px;
     padding: 50px 0 30px 0;
     margin: 0px;
     line-height: 1.15em;
@@ -1113,6 +1151,9 @@ body {
     line-height: 1.15 em;
     font-weight: 600;
     margin: 0px;
+  }
+  .recipes-list .info-container-mobile .post-text .shortdesc {
+    padding-bottom: 40px;
   }
 }
 
@@ -1136,7 +1177,13 @@ body {
     font-weight: bold;
     text-transform: uppercase;
   }
+  .category-list {
+    max-width: 800px;
+    margin: 0 auto 0 auto;
+  }
   .recipes-list {
+    max-width: 800px;
+    margin: 0 auto 0 auto;
     background-color: #F5F5F5;
     margin: 0;
     padding: 30px 9% 30px 9%;
@@ -1152,19 +1199,22 @@ body {
     padding: 0 9% 40px 9%;
   }
   .recipes-list .info-container-mobile .post-text .category {
-    font-size: 24px;
+    font-size: 20px;
     padding: 50px 0 1px 0;
     margin: 0px;
   }
   .recipes-list .info-container-mobile .post-text .title3 {
     padding: 0 0 20px 0;
-    font-size: 32px;
+    font-size: 42px;
     line-height: 1.15 em;
     font-weight: 600;
     margin: 0px;
   }
   .recipes-list .info-container-mobile .post-text p {
     line-height: 3;
+  }
+  .recipes-list .info-container-mobile .post-text .shortdesc {
+    padding-bottom: 40px;
   }
 }
 
@@ -1238,7 +1288,7 @@ body {
             box-sizing: border-box;
   }
   .recipes-list .post-text .category {
-    font-size: 42px;
+    font-size: 26px;
     padding: 50px 0 1px 0;
     margin: 0px;
     line-height: 1.5;
@@ -1252,6 +1302,9 @@ body {
   }
   .recipes-list .post-text p {
     line-height: 2;
+  }
+  .recipes-list .post-text .shortdesc {
+    padding-bottom: 40px;
   }
 }
 /*# sourceMappingURL=style.css.map */
