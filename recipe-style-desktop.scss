@@ -7,9 +7,6 @@ body
 
 	main
 	{
-		margin-bottom: 100px;
-	
-
 		.intro // <div>
 		{
 			background-color: #292929;
@@ -35,16 +32,19 @@ body
 						border-right-width: 1px;
 						border-right-color: rgb(255, 255, 255);
 
-						.intro__link::before
-						{
-							content: '\2190';
-						}
-			
 						.intro__link // <a>
 						{
 							color: inherit;
 							text-decoration: none;
 							font-weight: 500;
+							white-space: nowrap;
+
+							.intro__image // <img>
+							{
+								font-size: 1rem;
+								vertical-align: middle;
+								margin-right: 10px;
+							}
 						}
 					}
 
@@ -98,6 +98,18 @@ body
 			}
 		}
 
+		.hachures // <div>
+		{
+			width: 100%;
+			transform: rotate(0.5turn);
+			margin-top: -36.5px;
+
+			.hachures__image // <img>
+			{
+				width: 100%;
+			}
+		}
+
 		.illustration // <figure>
 		{
 			margin: -140px auto 0 auto;
@@ -120,11 +132,6 @@ body
 			float: right;
 			width: 50%;
 			margin: 0 20% 100px 0;
-			// border-image-source: url('/assets/images/hachures-blanches.png');
-			// border-image-width: 150px;
-			// border-image-repeat: round;
-			// border-image-slice: 30 0 0 0;
-			// border-image-outset: -73px;
 
 			.ingredients__title
 			{
@@ -264,6 +271,106 @@ body
 		.clear // <div>
 		{
 			clear: right;
+		}
+
+		.latest-updates // <section>
+		{
+			background-color: #F5F5F5;
+			padding-top: 50px;
+
+			.latest-updates__title // <h2>
+			{
+				margin: 0 20px 40px 20px;
+				text-align: center;
+
+				.latest-updates__title-part-1 // <span>
+				{
+					display: block;
+					margin-bottom: 10px;
+					font-size: 2.6rem;
+					font-weight: 400;
+				}
+
+				.latest-updates__title-part-2 // <span>
+				{
+					display: block;
+					font-size: 2.6rem;
+					font-weight: 600;
+				}
+			}
+
+			.latest-updates__content // <div>
+			{
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr 1fr;
+				width: 80%;
+				margin: 0 auto 0 auto;
+				padding-bottom: 100px;
+				grid-gap: 20px;
+
+				.latest-updates__recipe // <div>
+				{
+					background-color: rgb(255, 255, 255);
+
+					.latest-updates__image-box // <figure>
+					{
+						width: 100%;
+						height: 200px;
+						margin: 0 0 20px 0;
+
+						.latest-updates__image // <img>
+						{
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+						}
+					}
+
+					.latest-updates__date // <div>
+					{
+						margin: 0 20px 20px 20px;
+						text-transform: uppercase;
+
+						.latest-updates__clock // <img>
+						{
+							font-size: 1rem;
+							vertical-align: middle;
+						}
+					}
+
+					.latest-updates__title // <h2>
+					{
+						font-size: 1.25rem;
+						font-weight: 600;
+					}
+
+					.latest-updates__short-description // <p>
+					{
+						margin: 0 20px 20px 20px;
+					}
+
+					.latest-updates__read-more // <div>
+					{
+						text-align: right;
+						margin: 0 20px 20px 20px;
+
+						.latest-updates__link // <a>
+						{
+							font-weight: 500;
+							color: #292929;
+							text-decoration: none;
+							width: 100%;
+							text-align: center;
+							
+						}
+
+						.latest-updates__line // <span>
+						{
+							word-wrap: none;
+						}
+					}
+				}
+			}
 		}
 	}
 }
