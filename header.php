@@ -10,3 +10,22 @@
     <?php wp_head(); ?>
 </head>
 <body>
+    <header>
+        <div class="nav-menu">
+            <div class="nav-title">
+                <a href="index.php"><h1><?php echo bloginfo('title') ;?></h1></a>
+            </div>
+            <div class="nav-ul">
+                <?php wp_nav_menu(); ?>
+            </div>
+            <a href="#" class='hamburgerIcon'>
+                <p>Menu</p>
+                <img src="<?php bloginfo('template_url'); ?>/assets/svg/ham.svg" alt="">
+            </a> 
+        </div>
+        <div class="menuHAM">
+                <?php wp_nav_menu(); ?>
+                </div>
+            </div>
+    </header>
+    
