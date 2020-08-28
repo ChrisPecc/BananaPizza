@@ -118,6 +118,13 @@ body {
 .citation {
   display: flex;
   background-color: #292929;
+  .citation-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+  }
   .citation-img {
     img {
       width: 100%;

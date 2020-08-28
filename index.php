@@ -90,6 +90,7 @@
                 <?php while (have_rows('repeater_BPres')): the_row(); ?>
                 <p><?php echo get_sub_field('wysiwyg_repeater_BPres');?></p>
                 <?php endwhile; ?>
+                <a href="<?php the_permalink(); ?>">More infos</a>
                 
             </div>
         </div>  
@@ -100,40 +101,40 @@
 
     <div class="discover-menu">
         <div class="discover-title-mobile">
-            <h2>coucouc</h2>
-            <h2>coucouc</h2>
+            <h2><?php echo get_field('field_5f48b2b8fb2b5', 75);?></h2>
+            <h2><?php echo get_field('field_5f48b2c6fb2b6', 75);?></h2>
         </div>
         <div class="discover-img">
             <div class="discover-img-box">
-                <img class="index-hachures" src="<?php bloginfo('template_url'); ?>/assets/images/plat1.jpg" alt="">
+                <img class="index-hachures" src="<?php echo get_field('field_5f48b2cefb2b7', 75);?>" alt="">
             </div>
             <div class="discover-img-box">
-                <img class="index-hachures" src="<?php bloginfo('template_url'); ?>/assets/images/plat1.jpg" alt="">
+                <img class="index-hachures" src="<?php echo get_field('field_5f48b2e5fb2b8', 75);?>" alt="">
             </div>
             <div class="discover-img-box">
-                <img class="index-hachures" src="<?php bloginfo('template_url'); ?>/assets/images/plat1.jpg" alt="">
+                <img class="index-hachures" src="<?php echo get_field('field_5f48b2f5fb2b9', 75);?>" alt="">
             </div>
             <div class="discover-img-box">
-                <img class="index-hachures" src="<?php bloginfo('template_url'); ?>/assets/images/plat1.jpg" alt="">
+                <img class="index-hachures" src="<?php echo get_field('field_5f48b2fbfb2ba', 75);?>" alt="">
             </div>
            
         </div>
         <div class="discover-title-tab">
-            <h2 class='hide-tab'>coucou</h2>
-            <h2 class='hide-tab'>coucou</h2>
-            <p>cou cou cou </p>
-            <a href="#">coucou</a>
+            <h2 class='hide-tab'><?php echo get_field('field_5f48b2b8fb2b5', 75);?></h2>
+            <h2 class='hide-tab'><?php echo get_field('field_5f48b2c6fb2b6', 75);?></h2>
+            <p><?php echo get_field('field_5f48b324fb2bb', 75);?> </p>
+            <a href="<?php echo get_field('menu_link');?>">View the full menu</a>
         </div>
         <img class="discover-hachures" src="<?php bloginfo('template_url'); ?>/assets/images/hachures-blanches.png" alt="">
     </div>
     <div class="citation">
         <div class="citation-text">
-            <p>"</p>
-            <p>bla bla blaaaaaaa bla</p>
-            <p>- un mec</p>
+            <p></p>
+            <p><?php echo get_field('field_5f48b330fb2bc', 75);?></p>
+            <p><?php echo get_field('field_5f48b336fb2bd', 75);?></p>
         </div>
         <div class="citation-img">
-            <img src="<?php bloginfo('template_url'); ?>/assets/images/resto1.jpg" alt="">
+            <img src="<?php echo get_field('field_5f48b34cfb2be', 75);?>" alt="">
         </div>
         
     </div>
@@ -166,7 +167,7 @@
                         <div class="link-empty">
 
                         </div>
-                        <a href="#">Read more</a>
+                        <a href="<?php the_permalink(); ?>">Read more</a>
                     </div>
                 </div>
                 
