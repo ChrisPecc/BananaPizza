@@ -15,24 +15,106 @@ get_header(); ?>
         <h1 class="title">Recipes Blog</h1>
         <a class="bt-link" href="/?page_id=147">check our menu</a>
     </section>
+
+    <section class="category-list">
+        <?php
+        $categories = get_categories( array(
+            'orderby' => 'name',
+            'order'   => 'ASC',
+            'category' => 'recettes',
+            'hide_empty' => false,
+        ) );
+        ?>
+        
+        <form method="post">
+        <input type="submit" name="category" value="All Categories">
+        <?php
+
+        foreach($categories as $category) {
+            ?>
+                <input type="submit" name="category" value="<?php echo $category->name; ?>">
+                <?php
+                ?>
+            <?php   
+        }
+        ?>
+        </form>
+    </section>
     
     <section class="recipes-list">
         <?php
         $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-        $args = array(
-            'post_type'=>array('recettes'), 
-            'posts_per_page'=>5, 
-            'meta_key'=> 'date',
-            'orderby' => 'meta_value',
-            'order'   => 'DESC',
-            'paged' => $paged,
-        );
 
-        query_posts($args);
+        if (isset($_POST['category'])){
+            if ($_POST['category']=='All Categories'){
+                $args = array(
+                    'post_type'=>array('recettes'), 
+                    'posts_per_page'=>5, 
+                    'orderby' => 'date',
+                    'order'   => 'DESC',
+                    'paged' => $paged,
+                    
+                );
+            }
+
+            else {
+                $args = array(
+                    'post_type'=>array('recettes'), 
+                    'posts_per_page'=>5, 
+                    'orderby' => 'date',
+                    'order'   => 'DESC',
+                    'paged' => $paged,
+                    'tax_query' => array(
+                        array(
+                            'taxonomy' => 'category',
+                            'field'    => 'name',
+                            'terms'    => $_POST['category'],
+                        ),
+                    ),
+                    
+                );
+
+            }
+            
+        }
+
+        // if (!empty($_COOKIE['category'])){
+        //     $args = array(
+        //         'post_type'=>array('recettes'), 
+        //         'posts_per_page'=>5, 
+        //         'orderby' => 'date',
+        //         'order'   => 'DESC',
+        //         'paged' => $paged,
+        //         'tax_query' => array(
+        //             array(
+        //                 'taxonomy' => 'category',
+        //                 'field'    => 'name',
+        //                 'terms'    => $_COOKIE['category'],
+        //             ),
+        //         ),
+                
+        //     );
+        // }
+
+
+        else {
+            $args = array(
+                'post_type'=>array('recettes'), 
+                'posts_per_page'=>5, 
+                'orderby' => 'date',
+                'order'   => 'DESC',
+                'paged' => $paged,
+                
+            );
+
+        }
+
+        $query = new WP_Query($args);
 
         $count=0;
-        if ( have_posts() ) : 
-            while ( have_posts() ) : the_post();
+        if ( $query -> have_posts() ) : 
+            while ( $query -> have_posts() ) : $query -> the_post();
+                $category= get_the_category();
                 ?>
                 <div class="info-container-mobile <?php if ($count%2==1):?>info-container1<?php else:?>info-container2 <?php endif;?>">
                     <div class="post-picture">
@@ -40,8 +122,8 @@ get_header(); ?>
                     </div>
 
                     <div class="post-text">
-                        <p class="date"><?php the_field('date'); ?></p>
-                        <p class="category"><?php the_field('category'); ?></p>
+                        <p class="date"><?php echo get_the_date( 'd M Y' ); ?></p>
+                        <span class="category"><?php echo $category['0'] ->cat_name; ?></span>
                         <h3 class="title3"><?php the_field('title'); ?></h3>
                         <p class="shordesc"><?php the_field('short_description'); ?></p>
                         <a href="<?php the_permalink(); ?>">Read More</a>
@@ -56,10 +138,11 @@ get_header(); ?>
         <p>Cette section est vide</p>
         <?php
         endif;
+        wp_reset_postdata();
         
         ?>
         <div class="pagination">
-        <?php previous_posts_link(__('&larr; newer', 'kasparabi')); ?>
+        <?php previous_posts_link(__('&larr; newer', 'whatisthat')); ?>
 
             <?php 
                 echo paginate_links( array(

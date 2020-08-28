@@ -1056,6 +1056,11 @@ body {
   font-weight: lighter;
 }
 
+.archive-recipes-page .category-list {
+  background-color: #F5F5F5;
+  text-align: center;
+}
+
 @media only screen and (max-width: 420px) {
   .archive-recipes-page {
     font-family: 'Poppins', sans-serif;

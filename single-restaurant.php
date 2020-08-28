@@ -1,8 +1,5 @@
 <?php 
-/*
-* Template Name: Restaurant
-* Template Post Type: post, restaurant
-*/
+
 
     get_header();
     ?>
